@@ -1,0 +1,9 @@
+input:checked + svg {
+  display: block;
+}
+#sortboxLanguage:checked ~ #sortboxmenuLanguage {
+  display: block;
+}
+#sortboxTematica:checked ~ #sortboxmenuTematica {
+  display: block;
+}
