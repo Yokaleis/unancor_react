@@ -3,13 +3,16 @@ import PerfilImage from "../../assets/icons-dashboard-anunciante/Ellipse282.svg"
 import Circle from "../../assets/icons-dashboard-anunciante/Ellipse230.svg";
 import { Classes, Popover2 } from "@blueprintjs/popover2";
 import { Button } from "@blueprintjs/core";
+import Campana  from "../../assets/icons-dashboard-anunciante/campana.svg"
+import Cinco from "../../assets/icons-dashboard-anunciante/5.svg"
+import vector from "../../assets/icons-dashboard-anunciante/Vector.svg"
 
 function TopBar() {
   return (
     <div className="w-full h-16 bg-white absolute z-20 flex">
       <div className="inline-flex w-full">
         <div className="w-1/2 inline-flex items-center relative">
-          <img className="w-40 h-5 mt-2 ml-10" src={Logo} />
+          <img className="w-40 h-5 mt-2 ml-10 mr-5" src={Logo} />
           <Popover2
             interactionKind="click"
             popoverClassName={Classes.POPOVER2_CONTENT_SIZING}
@@ -71,22 +74,12 @@ function TopBar() {
               </div>
             }
             renderTarget={({ isOpen, ref, ...targetProps }) => (
-              <Button 
+              <Button
                 {...targetProps}
                 elementRef={ref}
-                icon={
-                  <svg
-                    className="fill-current h-4 w-4"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                  </svg>
-                } 
-                text={
-                  <h1 className="font-semibold text-2xl text-unancor-orange">
-                    miudev.com
-                  </h1>
-                }
+                rightIcon="chevron-down"
+                className="font-semibold text-2xl text-unancor-orange inline-flex items-center"
+                text="miudev.com"
               />
             )}
           />
@@ -99,24 +92,24 @@ function TopBar() {
           <div className="relative h-10 w-10">
             <img
               className="absolute top-0 left-4 h-5 w-4 z-20"
-              src="/assets/icons-dashboard-anunciante/Ellipse230.svg"
+              src={Circle}
             />
             <img
               className="absolute top-2 left-2 z-10"
-              src="/assets/icons-dashboard-anunciante/Vector.svg"
+              src={vector}
             />
             <img
               className="w-2 h-2 absolute top-1 left-5 z-30"
-              src="/assets/icons-dashboard-anunciante/5.svg"
+              src={Cinco}
             />
           </div>
           <img
             className="h-5 w-5"
-            src="/assets/icons-dashboard-anunciante/campana.svg"
+            src={Campana}
           />
           <img
             className="h-10 w-10"
-            src="/assets/icons-dashboard-anunciante/Ellipse282.svg"
+            src={PerfilImage}
           />
         </div>
       </div>

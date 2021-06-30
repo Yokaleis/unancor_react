@@ -1,33 +1,166 @@
-import Topbar from "../../../components/dashboard/TopBar"
-import Sidebar from "../../../components/dashboard/Sidebar"
+import Topbar from "../../../components/dashboard/TopBar";
+import Sidebar from "../../../components/dashboard/Sidebar";
+import Banner from "../../../assets/bg-banner.jpg";
+import Arrow from "../../../assets/icons-dashboard-anunciante/arrow.svg";
+import File from "../../../assets/icons-dashboard-anunciante/file.svg";
+import blackLink from "../../../assets/icons-dashboard-anunciante/link_black_24dp1.svg";
+import letterC from "../../../assets/C.svg";
+import Chart from "chart.js/auto";
+import React, { useEffect, useState } from "react";
+
+function ButtonMenuGridSee() {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div
+      className="flex justify-end absolute top-0 right-0"
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <svg
+        className="cursor-pointer"
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="18" height="18" rx="3" fill="#F4F4F4" />
+        <path
+          d="M9.00065 6.66732C9.64232 6.66732 10.1673 6.14232 10.1673 5.50065C10.1673 4.85898 9.64232 4.33398 9.00065 4.33398C8.35898 4.33398 7.83398 4.85898 7.83398 5.50065C7.83398 6.14232 8.35898 6.66732 9.00065 6.66732ZM9.00065 7.83398C8.35898 7.83398 7.83398 8.35898 7.83398 9.00065C7.83398 9.64232 8.35898 10.1673 9.00065 10.1673C9.64232 10.1673 10.1673 9.64232 10.1673 9.00065C10.1673 8.35898 9.64232 7.83398 9.00065 7.83398ZM9.00065 11.334C8.35898 11.334 7.83398 11.859 7.83398 12.5007C7.83398 13.1423 8.35898 13.6673 9.00065 13.6673C9.64232 13.6673 10.1673 13.1423 10.1673 12.5007C10.1673 11.859 9.64232 11.334 9.00065 11.334Z"
+          fill="black"
+        />
+      </svg>
+      {isOpen && (
+        <div className="bg-white z-10 border p-3 space-y-3 w-24 right-5 top-0 absolute text-xs">
+          <div>Editar</div>
+          <div>Desactivar</div>
+          <div>Eliminar</div>
+          <hr />
+          <div className="text-unancor-blue">Compartir</div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Grafica() {
+  useEffect(() => {
+    let ctx = document.getElementById("estadisticaproyecto").getContext("2d");
+
+    let estadisticaproyecto = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: ["1", "2", "3", "4", "5"],
+        datasets: [
+          {
+            label: "",
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: ["rgba(45, 114, 201)"],
+            borderColor: ["rgba(45, 114, 201)"],
+            tension: 0.5,
+            borderWidth: 2,
+          },
+          {
+            label: "",
+            data: [23, 5, 2, 3],
+            backgroundColor: ["rgba(178, 223, 138)"],
+            borderColor: ["rgba(178, 223, 138)"],
+            tension: 0.5,
+            borderWidth: 2,
+          },
+          {
+            label: "",
+            data: [10, 3, 5, 2, 3, 23],
+            backgroundColor: ["rgba(166, 206, 277)"],
+            borderColor: ["rgba(166, 206, 277)"],
+            tension: 0.5,
+            borderWidth: 2,
+          },
+        ],
+      },
+      options: {
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+        scales: {
+          y: {
+            ticks: {
+              font: {
+                size: 8,
+              },
+            },
+            beginAtZero: false,
+          },
+          x: {
+            ticks: {
+              font: {
+                size: 8,
+              },
+            },
+          },
+        },
+      },
+    });
+    return () => {
+      estadisticaproyecto.destroy();
+    };
+  }, [0]);
+
+  return (
+    <div className="relative">
+      <canvas
+        id="estadisticaproyecto"
+        width="90"
+        height="50"
+      />
+      <ButtonMenuGridSee/>
+    </div>
+    
+  );
+}
 
 function Home() {
+  const [seeType, setSeeType] = useState("grid"); // table or grid
+  const OnclickSeeType = (type) => {
+    setSeeType(type);
+  };
   return (
     <div className="bg-gray-200 h-screen relative">
-      <Topbar/>
-      <Sidebar/>
+      <Topbar />
+      <Sidebar />
       <div className="grid grid-cols-3 gap-4 absolute h-full pl-24 pr-4 pt-20 pb-8 w-full">
         <div className="col-span-2 flex flex-col">
-          <div className="relative w-full col-span-2 h-24 rounded-lg">
-            <img
-              className="z-10 absolute object-cover object-center h-full w-full rounded-lg"
-              src="/assets/bg-banner.jpg"
-            />
-            <div className="z-20 absolute w-full bg-unancor-blue h-full bg-opacity-90 rounded-lg"></div>
-            <div className="flex absolute z-30 font-bold text-5xl text-white h-full w-full">
-              <div className="ml-5 w-1/2 flex flex-col items-start justify-center">
-                <div className="">Linkbooster</div>
-              </div>
-              <div className="w-1/2 text-right py-1 mr-6">
-                -50%
-                <hr className="invisible my-2" />
-                <div className="text-xs text-white">
+          <div
+            className="w-full col-span-2 h-24 rounded-lg"
+            style={{
+              background: "url(" + Banner + ")",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <div
+              className="
+              w-full
+              bg-unancor-blue
+              h-full
+              bg-opacity-80
+              rounded-lg
+              inline-flex
+              p-2
+            "
+              style={{ justifyContent: "space-between" }}
+            >
+              <div className="font-bold text-5xl text-white">Linkbooster</div>
+              <div className="flex flex-col items-end">
+                <div className="text-5xl text-white font-bold">-50%</div>
+                <div className="text-xl text-white">
                   Promoci&oacute;n valida hasta 01/05/2021
                 </div>
               </div>
             </div>
           </div>
-          <div className="w-full bg-white mt-3 rounded-lg flex flex-col h-3/2">
+          <div className="w-full bg-white mt-3 rounded-lg flex flex-col h-full">
             <div className="pr-5 pl-5 flex">
               <div className="w-1/2">
                 <div className="text-xl font-bold mt-2">Proyectos</div>
@@ -74,7 +207,7 @@ function Home() {
                   </div>
                   <div
                     className="bg-unancor-blue rounded"
-                    style={{ width: "70px", height: "5px"}}
+                    style={{ width: "70px", height: "5px" }}
                   ></div>
                 </div>
                 <div className="ml-6 inline-flex space-x-2">
@@ -100,158 +233,127 @@ function Home() {
                 <h1 className="ml-24">
                   <span className="opacity-50 text-sm">Ordenar</span>
                 </h1>
-                <div id="tableButton" className="cursor-pointer">
+                <div
+                  className="cursor-pointer"
+                  onClick={() => OnclickSeeType("table")}
+                >
                   <span className="material-icons-outlined">view_list</span>
                 </div>
-                <div id="gridButton" className="cursor-pointer">
+                <div
+                  className="cursor-pointer"
+                  onClick={() => OnclickSeeType("grid")}
+                >
                   <span className="material-icons-outlined">grid_view</span>
                 </div>
               </div>
             </div>
-            <div className="flex p-5 pt-0 pb-0">
-              <table
-                className="hidden w-full bg-white text-xs border "
-                id="tableProyects"
-              >
-                <thead className="bg-gray-200 text-black">
-                  <tr>
-                    <th className="font-medium opacity-50 py-4">
-                      <div className="flex items-center justify-center"></div>
-                    </th>
-                    <th className="font-medium opacity-50 py-4">
-                      <div className="flex items-center justify-center">Proyecto</div>
-                    </th>
-                    <th className="font-medium opacity-50">
-                      <div className="flex items-center justify-center">Visitas</div>
-                    </th>
-                    <th className="font-medium opacity-50">
-                      <div className="flex items-center justify-center">
-                        Inversi&oacute;n
-                      </div>
-                    </th>
-                    <th className="font-medium opacity-50">
-                      <div className="flex items-center justify-center">DR</div>
-                    </th>
-                    <th className="font-medium opacity-50">
-                      <div className="flex items-center justify-center">DA</div>
-                    </th>
-                    <th className="font-medium opacity-50">
-                      <div className="flex items-center justify-center">TF</div>
-                    </th>
-                    <th className="font-medium opacity-50">
-                      <div className="flex items-center justify-center">CF</div>
-                    </th>
-                    <th className="font-medium opacity-50">
-                      <div className="flex items-center justify-center">Acciones</div>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="text-gray-700 divide-y divide-gray-200">
-                  {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => (
-                    <tr key={index}>
-                      <td className="py-3 flex-col flex items-center justify-center">
-                        <img src="/assets/C.svg" alt="Estadisticas" />
-                      </td>
-                      <td className="text-center font-bold p-2 text-unancor-blue">
-                        coclusion.com.ar
-                      </td>
-                      <td className="text-center font-bold p-2">4.5201</td>
-                      <td className="text-center font-bold p-2">3.757</td>
-                      <td className="text-center font-bold p-2">57</td>
-                      <td className="text-center font-bold p-2">100</td>
-                      <td className="text-center font-bold p-2">85</td>
-                      <td className="text-center font-bold p-2">100</td>
-                      <td className="relative">
-                        <svg
-                          className="mx-auto cursor-pointer"
-                          width="4"
-                          height="10"
-                          viewBox="0 0 4 10"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M2.00065 2.66732C2.64232 2.66732 3.16732 2.14232 3.16732 1.50065C3.16732 0.858984 2.64232 0.333984 2.00065 0.333984C1.35898 0.333984 0.833984 0.858984 0.833984 1.50065C0.833984 2.14232 1.35898 2.66732 2.00065 2.66732ZM2.00065 3.83398C1.35898 3.83398 0.833984 4.35898 0.833984 5.00065C0.833984 5.64232 1.35898 6.16732 2.00065 6.16732C2.64232 6.16732 3.16732 5.64232 3.16732 5.00065C3.16732 4.35898 2.64232 3.83398 2.00065 3.83398ZM2.00065 7.33398C1.35898 7.33398 0.833984 7.85898 0.833984 8.50065C0.833984 9.14232 1.35898 9.66732 2.00065 9.66732C2.64232 9.66732 3.16732 9.14232 3.16732 8.50065C3.16732 7.85898 2.64232 7.33398 2.00065 7.33398Z"
-                            fill="black"
-                          />
-                        </svg>
-                        <div
-                          id="idMoreOptions1"
-                          className="hidden bg-white z-50 border p-5 space-y-3 w-32 right-14 -bottom-28 xl:right-20"
-                        >
-                          <div>Editar</div>
-                          <div>Desactivar</div>
-                          <div>Eliminar</div>
-                          <hr />
-                          <div className="text-unancor-blue">Compartir</div>
+            {/* Table See */}
+            {seeType === "table" && (
+              <div className="flex p-5 pt-0 pb-0">
+                <table className="w-full bg-white text-xs border ">
+                  <thead className="bg-gray-200 text-black">
+                    <tr>
+                      <th className="font-medium opacity-50 py-4">
+                        <div className="flex items-center justify-center"></div>
+                      </th>
+                      <th className="font-medium opacity-50 py-4">
+                        <div className="flex items-center justify-center">
+                          Proyecto
                         </div>
-                      </td>
+                      </th>
+                      <th className="font-medium opacity-50">
+                        <div className="flex items-center justify-center">
+                          Visitas
+                        </div>
+                      </th>
+                      <th className="font-medium opacity-50">
+                        <div className="flex items-center justify-center">
+                          Inversi&oacute;n
+                        </div>
+                      </th>
+                      <th className="font-medium opacity-50">
+                        <div className="flex items-center justify-center">
+                          DR
+                        </div>
+                      </th>
+                      <th className="font-medium opacity-50">
+                        <div className="flex items-center justify-center">
+                          DA
+                        </div>
+                      </th>
+                      <th className="font-medium opacity-50">
+                        <div className="flex items-center justify-center">
+                          TF
+                        </div>
+                      </th>
+                      <th className="font-medium opacity-50">
+                        <div className="flex items-center justify-center">
+                          CF
+                        </div>
+                      </th>
+                      <th className="font-medium opacity-50">
+                        <div className="flex items-center justify-center">
+                          Acciones
+                        </div>
+                      </th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            {/* CARD */}
-            <div
-              className="px-3 gap-2 grid grid-cols-4 grid-rows-2"
-              id="gridProyects"
-            >
-              <div className="border p-2">
-                <div className="flex justify-end relative">
-                  {/* <img src="/assets/Estadisticas/Tooltip Medio/Frame51@2x.svg" alt="estadistica"/> */}
-                  {/* GRAFICA ESTADISTICA */}
-                  <canvas
-                    id="estadisticaproyecto"
-                    width="90"
-                    height="50"
-                  ></canvas>
-                  <svg
-                    className="absolute cursor-pointer"
-                    id="gridOptionsButton"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="18" height="18" rx="3" fill="#F4F4F4" />
-                    <path
-                      d="M9.00065 6.66732C9.64232 6.66732 10.1673 6.14232 10.1673 5.50065C10.1673 4.85898 9.64232 4.33398 9.00065 4.33398C8.35898 4.33398 7.83398 4.85898 7.83398 5.50065C7.83398 6.14232 8.35898 6.66732 9.00065 6.66732ZM9.00065 7.83398C8.35898 7.83398 7.83398 8.35898 7.83398 9.00065C7.83398 9.64232 8.35898 10.1673 9.00065 10.1673C9.64232 10.1673 10.1673 9.64232 10.1673 9.00065C10.1673 8.35898 9.64232 7.83398 9.00065 7.83398ZM9.00065 11.334C8.35898 11.334 7.83398 11.859 7.83398 12.5007C7.83398 13.1423 8.35898 13.6673 9.00065 13.6673C9.64232 13.6673 10.1673 13.1423 10.1673 12.5007C10.1673 11.859 9.64232 11.334 9.00065 11.334Z"
-                      fill="black"
-                    />
-                  </svg>
-                  <div
-                    className="hidden bg-white z-50 border p-5 space-y-3 w-32 right-0 top-5"
-                  >
-                    <div>Editar</div>
-                    <div>Desactivar</div>
-                    <div>Eliminar</div>
-                    <hr />
-                    <div className="text-unancor-blue">Compartir</div>
+                  </thead>
+                  <tbody className="text-gray-700 divide-y divide-gray-200">
+                    {[1, 2, 3, 4, 5, 6].map((item, index) => (
+                      <tr key={index}>
+                        <td className="py-3 flex-col flex items-center justify-center">
+                          <img src={letterC} alt="Estadisticas" />
+                        </td>
+                        <td className="text-center font-bold p-2 text-unancor-blue">
+                          coclusion.com.ar
+                        </td>
+                        <td className="text-center font-bold p-2">4.5201</td>
+                        <td className="text-center font-bold p-2">3.757</td>
+                        <td className="text-center font-bold p-2">57</td>
+                        <td className="text-center font-bold p-2">100</td>
+                        <td className="text-center font-bold p-2">85</td>
+                        <td className="text-center font-bold p-2">100</td>
+                        <td className="relative">
+                          <div className="right-10 absolute top-5">
+                            <ButtonMenuGridSee/>
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+            {/* Grid See */}
+            {seeType === "grid" && (
+              <div className="px-3 gap-2 grid grid-cols-4">
+                <div className="border p-2 relative">
+                  <Grafica />
+                  <div>
+                    <span className="text-3xl font-bold">C</span>
+                    <span className="text-sm text-unancor-blue font-bold ml-1">
+                      conclusion.com.ar
+                    </span>
                   </div>
-                </div>
-                <div>
-                  <span className="text-3xl font-bold">C</span>
-                  <span className="text-lg text-unancor-blue font-bold ml-1">
-                    conclusion.com.ar
-                  </span>
-                </div>
-                <div className="flex">
-                  <div className="w-1/2 text-left text-xs opacity-50">
-                    Inversi&oacute;n
+                  <div className="flex">
+                    <div className="w-1/2 text-left text-xs opacity-50">
+                      Inversi&oacute;n
+                    </div>
+                    <div className="w-1/2 text-right text-sm font-bold">
+                      &dollar;3.757
+                    </div>
                   </div>
-                  <div className="w-1/2 text-right text-xl font-bold">
-                    &dollar;3.757
+                  <div className="flex">
+                    <div className="w-1/2 text-left text-sm opacity-50 mt-3">
+                      DR
+                    </div>
+                    <div className="w-1/2 text-right text-sm font-bold">57</div>
                   </div>
-                </div>
-                <div className="flex">
-                  <div className="w-1/2 text-left text-xs opacity-50 mt-3">DR</div>
-                  <div className="w-1/2 text-right text-xl font-bold">57</div>
                 </div>
               </div>
-            </div>
-
-            <div className="flex items-end justify-center py-2">
+            )}
+            {/* Pagination */}
+            <div className="flex items-end justify-center py-2 flex-1">
               <svg
                 width="136"
                 height="30"
@@ -295,33 +397,31 @@ function Home() {
                 {/* DIVDER */}
                 <div
                   className="bg-unancor-blue rounded"
-                  style={{ width: "105px", height: "5px"}}
+                  style={{ width: "105px", height: "5px" }}
                 ></div>
               </div>
-              <div className="float-left text-sm opacity-50 ml-4">En Oferta</div>
+              <div className="float-left text-sm opacity-50 ml-4">
+                En Oferta
+              </div>
             </div>
             <table className="w-full bg-white text-xs border">
               <thead className="bg-unancor-bgglobal text-black">
                 <tr>
                   <th className="font-medium opacity-50">
-                    <div className="flex items-center justify-center">Medio</div>
+                    <div className="flex items-center justify-center">
+                      Medio
+                    </div>
                   </th>
                   <th className="font-medium">
                     <div className="flex items-center justify-center">
                       <span className="opacity-50">Tr&aacute;fico</span>
-                      <img
-                        className="ml-1"
-                        src="/assets/icons-dashboard-anunciante/arrow.svg"
-                      />
+                      <img className="ml-1" src={Arrow} />
                     </div>
                   </th>
                   <th className="font-medium ">
                     <div className="flex items-center justify-center">
                       <span className="opacity-50">DR</span>
-                      <img
-                        className="ml-1"
-                        src="/assets/icons-dashboard-anunciante/arrow.svg"
-                      />
+                      <img className="ml-1" src={Arrow} />
                     </div>
                   </th>
                   <th className="font-medium opacity-50">
@@ -329,28 +429,16 @@ function Home() {
                   </th>
                   <th className="font-medium">
                     <div className="flex items-center justify-center">
-                      <img
-                        className="mr-1"
-                        src="/assets/icons-dashboard-anunciante/file.svg"
-                      />
+                      <img className="mr-1" src={File} />
                       <span className="opacity-50">Art&iacute;culo</span>
-                      <img
-                        className="ml-1"
-                        src="/assets/icons-dashboard-anunciante/arrow.svg"
-                      />
+                      <img className="ml-1" src={Arrow} />
                     </div>
                   </th>
                   <th className="font-medium px-3">
                     <div className="flex items-center justify-center">
-                      <img
-                        className="mr-1"
-                        src="/assets/icons-dashboard-anunciante/link_black_24dp1.svg"
-                      />
+                      <img className="mr-1" src={blackLink} />
                       <span className="opacity-50">Enlace</span>
-                      <img
-                        className="ml-1"
-                        src="/assets/icons-dashboard-anunciante/arrow.svg"
-                      />
+                      <img className="ml-1" src={Arrow} />
                     </div>
                   </th>
                 </tr>
@@ -423,7 +511,6 @@ function Home() {
               </tbody>
             </table>
           </div>
-
           <div className="w-full bg-white rounded-lg p-3 pb-7 mt-3 h-1/2">
             <div className="flex mb-7">
               <div className="float-left text-sm font-bold">
@@ -431,7 +518,7 @@ function Home() {
                 {/* DIVDER */}
                 <div
                   className="bg-unancor-blue rounded"
-                  style={{width: "75px", height: "5px"}}
+                  style={{ width: "75px", height: "5px" }}
                 ></div>
               </div>
             </div>
@@ -439,16 +526,24 @@ function Home() {
               <thead className="bg-gray-200 text-black">
                 <tr>
                   <th className="font-medium opacity-50 py-2">
-                    <div className="flex items-center justify-center">Medio</div>
+                    <div className="flex items-center justify-center">
+                      Medio
+                    </div>
                   </th>
                   <th className="font-medium opacity-50">
-                    <div className="flex items-center justify-center">Proyecto</div>
+                    <div className="flex items-center justify-center">
+                      Proyecto
+                    </div>
                   </th>
                   <th className="font-medium opacity-50">
-                    <div className="flex items-center justify-center">Fecha</div>
+                    <div className="flex items-center justify-center">
+                      Fecha
+                    </div>
                   </th>
                   <th className="font-medium opacity-50">
-                    <div className="flex items-center justify-center">Status</div>
+                    <div className="flex items-center justify-center">
+                      Status
+                    </div>
                   </th>
                 </tr>
               </thead>
