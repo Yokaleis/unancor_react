@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Inversion from "../../../../../assets/Serps/Inversion.svg";
 
 function CrearAnalisis() {
   return (

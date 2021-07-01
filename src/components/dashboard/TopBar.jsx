@@ -12,7 +12,7 @@ function TopBar() {
     <div className="w-full h-16 bg-white absolute z-20 flex">
       <div className="inline-flex w-full">
         <div className="w-1/2 inline-flex items-center relative">
-          <img className="w-40 h-5 mt-2 ml-10 mr-5" src={Logo} />
+          <img className="w-40 h-5 mt-2 ml-10 mr-5" src={Logo} alt="Logo"/>
           <Popover2
             interactionKind="click"
             popoverClassName={Classes.POPOVER2_CONTENT_SIZING}

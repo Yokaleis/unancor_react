@@ -1,4 +1,3 @@
-import CheckBoxRegistro from "../../../components/registro/CheckBoxRegistro";
 import { Link } from "react-router-dom";
 import "./CrearMedio.css";
 
