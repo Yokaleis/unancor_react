@@ -1,63 +1,155 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import { 
-  Inicio, 
-  CuentaVerificada, 
-  TipoRegistro, 
-  VerificaTuCuenta, 
-  CrearMedio, 
-  RegistroProyecto, 
-  SeleccionarKeywords, 
-  TipoCliente, 
+import React, { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import {
+  Inicio,
+  CuentaVerificada,
+  TipoRegistro,
+  VerificaTuCuenta,
+  CrearMedio,
+  RegistroProyecto,
+  SeleccionarKeywords,
+  TipoCliente,
   Felicidades,
-  HomeAnunciante 
-} from "./pages/index"
+  HomeAnunciante,
+  AnalisisEspera,
+  CrearAnalisis,
+  HomeSerps,
+  PopUpAnalisis,
+  PopUpAnalisisFull,
+  ResultadoAnalisis,
+  Competencias,
+  Propuestos,
+} from "./pages/index";
+
+import Topbar from "./components/dashboard/TopBar";
+import Sidebar from "./components/dashboard/Sidebar";
+import CheckBoxRegistro from "./components/registro/CheckBoxRegistro";
 
 function App() {
   const [clientType, setClientType] = useState("anunciante"); // editor o anunciante
-  
+
   const selectTypeClient = (clientType) => {
-    setClientType(clientType)
-  }
+    setClientType(clientType);
+  };
 
   return (
-    <Router>
-      <div className="h-screen">
+    <div className="h-screen">
+      <Router>
         <Switch>
           <Route path="/Inicio">
-            <Inicio clientType={clientType}/>
+            <div className="grid grid-cols-2 h-full">
+              <Inicio />
+            </div>
           </Route>
           <Route path="/CuentaVerificada">
-            <CuentaVerificada clientType={clientType}/>
+            <div className="grid grid-cols-2 h-full">
+              <CheckBoxRegistro pageCount={0} clientType={clientType} />
+              <CuentaVerificada />
+            </div>
           </Route>
           <Route path="/TipoRegistro">
-            <TipoRegistro clientType={clientType} selectTypeClient={selectTypeClient}/>
+            <div className="grid grid-cols-2 h-full">
+              <CheckBoxRegistro pageCount={0} clientType={clientType} />
+              <TipoRegistro
+                clientType={clientType}
+                selectTypeClient={selectTypeClient}
+              />
+            </div>
           </Route>
           <Route path="/VerificaTuCuenta">
-            <VerificaTuCuenta clientType={clientType}/>
+            <div className="grid grid-cols-2 h-full">
+              <CheckBoxRegistro pageCount={0} clientType={clientType} />
+              <VerificaTuCuenta />
+            </div>
           </Route>
           <Route path="/CrearMedio">
-            <CrearMedio clientType={clientType}/>
+            <div className="grid grid-cols-2 h-full">
+              <CheckBoxRegistro pageCount={1} clientType={clientType} />
+              <CrearMedio />
+            </div>
           </Route>
           <Route path="/RegistroProyecto">
-            <RegistroProyecto clientType={clientType}/>
+            <div className="grid grid-cols-2 h-full">
+              <CheckBoxRegistro pageCount={2} clientType={clientType} />
+              <RegistroProyecto />
+            </div>
           </Route>
           <Route path="/SeleccionarKeywords">
-            <SeleccionarKeywords clientType={clientType}/>
+            <div className="grid grid-cols-2 h-full">
+              <CheckBoxRegistro pageCount={3} clientType={clientType} />
+              <SeleccionarKeywords />
+            </div>
           </Route>
           <Route path="/TipoCliente">
-            <TipoCliente/>
+            <div className="grid grid-cols-2 h-full">
+              <CheckBoxRegistro pageCount={1} clientType={clientType} />
+              <TipoCliente />
+            </div>
           </Route>
           <Route path="/Felicidades">
-            <Felicidades clientType={clientType}/>
+            <div className="grid grid-cols-2 h-full">
+              <CheckBoxRegistro pageCount={5} clientType={clientType} />
+              <Felicidades clientType={clientType} />
+            </div>
           </Route>
           <Route path="/HomeAnunciante">
-            <HomeAnunciante/>
+            <Topbar />
+            <Sidebar />
+            <HomeAnunciante />
           </Route>
-          <Redirect to="/Inicio"/>
+          <Route path="/HomeSerps">
+            <Switch>
+              <Route exact path="/HomeSerps">
+                <Topbar />
+                <Sidebar />
+                <HomeSerps />
+              </Route>
+              <Route exact path="/HomeSerps/AnalisisEspera">
+                <Topbar />
+                <Sidebar />
+                <AnalisisEspera />
+              </Route>
+              <Route exact path="/HomeSerps/ResultadoAnalisis">
+                <Topbar />
+                <Sidebar />
+                <ResultadoAnalisis />
+              </Route>
+              <Route path="/HomeSerps/PopUpAnalisis">
+                <Topbar />
+                <Sidebar />
+                <PopUpAnalisis />
+              </Route>
+              <Route path="/HomeSerps/PopUpAnalisisFull">
+                <Topbar />
+                <Sidebar />
+                <PopUpAnalisisFull />
+              </Route>
+              <Route path="/HomeSerps/CrearAnalisis">
+                <Topbar />
+                <Sidebar />
+                <CrearAnalisis />
+              </Route>
+              <Route path="/HomeSerps/Competencias">
+                <Topbar />
+                <Sidebar />
+                <Competencias />
+              </Route>
+              <Route path="/HomeSerps/Propuestos">
+                <Topbar />
+                <Sidebar />
+                <Propuestos />
+              </Route>
+            </Switch>
+          </Route>
+          <Redirect to="/Inicio" />
         </Switch>
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 

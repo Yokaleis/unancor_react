@@ -4,7 +4,7 @@ import "./Inicio.css";
 
 function Inicio() {
   return (
-    <div className="grid grid-cols-2 h-full">
+    <>
       <div className="bg-unancor-blue flex flex-col items-end justify-center">
         <div className="flex flex-col justify-center space-y-8 mx-14 -mt-20">
           <h1 className="text-white font-medium text-5xl">
@@ -122,7 +122,7 @@ function Inicio() {
           </form>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

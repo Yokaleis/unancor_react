@@ -5,7 +5,7 @@ function Propuestos() {
         <div class="bg-white h-full flex flex-col p-4">
           <div
             class="inline-flex justify-end py-2 space-x-4"
-            style="height: 8%;"
+            style={{ height: "8%" }}
           >
             <button class="px-8 py-2 bg-gray-100 font-sans text-sm font-bold">
               Propuesta
@@ -39,7 +39,7 @@ function Propuestos() {
           </div>
           <div
             class="inline-flex items-start space-x-4"
-            style="height: 7%;"
+            style={{ height: "7%" }}
             id="tab"
           >
             <h1 class="text-sm font-medium cursor-pointer">
@@ -53,7 +53,7 @@ function Propuestos() {
           </div>
           {/* Control Tab */}
           {/* Barra de Accion de la tabla */}
-          <div class="inline-flex mt-5" style="height: 7%;">
+          <div class="inline-flex mt-5" style={{ height: "7%" }}>
             <div class="inline-flex w-1/2">
               <div class="border flex">
                 <svg
@@ -276,7 +276,7 @@ function Propuestos() {
                 </div>
                 {/* Fin Boton de filtros */}
                 <div
-                  style="right: 88px;"
+                  style={{ right: "88px" }}
                   class="space-y-2 w-48 top-60 absolute text-xs bg-white shadow-md p-3 z-10 flex-col hidden"
                   id="windowPestallas"
                 >
@@ -416,9 +416,9 @@ function Propuestos() {
               </div>
             </div>
           </div>
-          <div class="py-4" style="height: 80%;">
+          <div class="py-4" style={{ height: "80%" }}>
             {/* Cabezera */}
-            <div class="grid grid-cols-13 text-xs" style="height: 7%;">
+            <div class="grid grid-cols-13 text-xs" style={{ height: "7%" }}>
               <div class="flex justify-center items-center opacity-50">
                 Seleccionar
               </div>
@@ -705,8 +705,7 @@ function Propuestos() {
             {/* Cuerpo de la tabla */}
             <div
               class="grid grid-cols-13 text-xs overflow-scroll"
-              style="height: 84%;"
-              id="tableBody"
+              style={{ height: "84%" }}
             >
               {/* Cabezera de ejemplo para ajustar los width de las columnas del cuerpo */}
               <div class="flex justify-center items-center opacity-50 invisible h-0">
@@ -885,223 +884,226 @@ function Propuestos() {
               </div>
 
               {/* Template usada para generar las filas de la tabla */}
-              <template id="exampleRow">
-                <div class="flex justify-center">
-                  <input type="checkbox" />
-                </div>
-                <div
-                  class="inline-flex justify-center items-center relative"
-                  id="hoverPublicidad"
-                >
-                  <div class="left-8 w-40 text-ss text-unancor-blue text-center shadow-md bg-white p-1 hidden">
-                    Marcado como publicidad
+              {[1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7,].map(() => (
+                <>
+                  <div class="flex justify-center">
+                    <input type="checkbox" />
                   </div>
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    class="inline-flex justify-center items-center relative"
+                    id="hoverPublicidad"
                   >
-                    <path
-                      d="M10.4993 6.41732V7.58398H12.8327V6.41732H10.4993ZM9.33268 10.2732C9.89268 10.6873 10.6219 11.2357 11.1994 11.6673C11.4327 11.3581 11.666 11.0431 11.8993 10.734C11.3218 10.3023 10.5927 9.75398 10.0327 9.33398C9.79935 9.64898 9.56602 9.96398 9.33268 10.2732ZM11.8993 3.26732C11.666 2.95815 11.4327 2.64315 11.1994 2.33398C10.6219 2.76565 9.89268 3.31398 9.33268 3.73398C9.56602 4.04315 9.79935 4.35815 10.0327 4.66732C10.5927 4.24732 11.3218 3.70482 11.8993 3.26732ZM2.33268 5.25065C1.69102 5.25065 1.16602 5.77565 1.16602 6.41732V7.58398C1.16602 8.22565 1.69102 8.75065 2.33268 8.75065H2.91602V11.084H4.08268V8.75065H4.66602L7.58268 10.5007V3.50065L4.66602 5.25065H2.33268ZM9.04102 7.00065C9.04102 6.22482 8.70268 5.52482 8.16602 5.04648V8.94898C8.70268 8.47648 9.04102 7.77648 9.04102 7.00065Z"
-                      fill="#2D72C9"
-                    />
-                  </svg>
-                  <span class="font-bold text-xs text-unancor-blue">
-                    enconosublime.com
-                  </span>
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g opacity="0.25">
+                    <div class="left-8 w-40 text-ss text-unancor-blue text-center shadow-md bg-white p-1 hidden">
+                      Marcado como publicidad
+                    </div>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <path
-                        d="M11.0833 11.0833H2.91667V2.91667H7V1.75H2.91667C2.26917 1.75 1.75 2.275 1.75 2.91667V11.0833C1.75 11.725 2.26917 12.25 2.91667 12.25H11.0833C11.725 12.25 12.25 11.725 12.25 11.0833V7H11.0833V11.0833ZM8.16667 1.75V2.91667H10.2608L4.52667 8.65083L5.34917 9.47333L11.0833 3.73917V5.83333H12.25V1.75H8.16667Z"
-                        fill="black"
+                        d="M10.4993 6.41732V7.58398H12.8327V6.41732H10.4993ZM9.33268 10.2732C9.89268 10.6873 10.6219 11.2357 11.1994 11.6673C11.4327 11.3581 11.666 11.0431 11.8993 10.734C11.3218 10.3023 10.5927 9.75398 10.0327 9.33398C9.79935 9.64898 9.56602 9.96398 9.33268 10.2732ZM11.8993 3.26732C11.666 2.95815 11.4327 2.64315 11.1994 2.33398C10.6219 2.76565 9.89268 3.31398 9.33268 3.73398C9.56602 4.04315 9.79935 4.35815 10.0327 4.66732C10.5927 4.24732 11.3218 3.70482 11.8993 3.26732ZM2.33268 5.25065C1.69102 5.25065 1.16602 5.77565 1.16602 6.41732V7.58398C1.16602 8.22565 1.69102 8.75065 2.33268 8.75065H2.91602V11.084H4.08268V8.75065H4.66602L7.58268 10.5007V3.50065L4.66602 5.25065H2.33268ZM9.04102 7.00065C9.04102 6.22482 8.70268 5.52482 8.16602 5.04648V8.94898C8.70268 8.47648 9.04102 7.77648 9.04102 7.00065Z"
+                        fill="#2D72C9"
                       />
-                    </g>
-                  </svg>
-                </div>
-                <div
-                  class="flex items-center justify-center relative"
-                  id="hoverAffinity"
-                >
-                  <svg
-                    class="mx-auto"
-                    width="28"
-                    height="8"
-                    viewBox="0 0 28 8"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                    </svg>
+                    <span class="font-bold text-xs text-unancor-blue">
+                      enconosublime.com
+                    </span>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.25">
+                        <path
+                          d="M11.0833 11.0833H2.91667V2.91667H7V1.75H2.91667C2.26917 1.75 1.75 2.275 1.75 2.91667V11.0833C1.75 11.725 2.26917 12.25 2.91667 12.25H11.0833C11.725 12.25 12.25 11.725 12.25 11.0833V7H11.0833V11.0833ZM8.16667 1.75V2.91667H10.2608L4.52667 8.65083L5.34917 9.47333L11.0833 3.73917V5.83333H12.25V1.75H8.16667Z"
+                          fill="black"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                  <div
+                    class="flex items-center justify-center relative"
+                    id="hoverAffinity"
                   >
-                    <rect width="8" height="8" rx="1" fill="#81C784" />
-                    <rect x="10" width="8" height="8" rx="1" fill="#66BB6A" />
-                    <rect x="20" width="8" height="8" rx="1" fill="#4CAF50" />
-                  </svg>
+                    <svg
+                      class="mx-auto"
+                      width="28"
+                      height="8"
+                      viewBox="0 0 28 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="8" height="8" rx="1" fill="#81C784" />
+                      <rect x="10" width="8" height="8" rx="1" fill="#66BB6A" />
+                      <rect x="20" width="8" height="8" rx="1" fill="#4CAF50" />
+                    </svg>
 
-                  <div class="bg-white shadow-md w-96 p-3 absolute z-10 left-16 hidden">
-                    <div class="my-auto mx-auto">
-                      <div class="bg-green-100 rounded-full px-3 py-6">
+                    <div class="bg-white shadow-md w-96 p-3 absolute z-10 left-16 hidden">
+                      <div class="my-auto mx-auto">
+                        <div class="bg-green-100 rounded-full px-3 py-6">
+                          <svg
+                            class="mx-auto"
+                            width="29"
+                            height="8"
+                            viewBox="0 0 29 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="0.0761719"
+                              width="8"
+                              height="8"
+                              rx="1"
+                              fill="#81C784"
+                            />
+                            <rect
+                              x="10.0762"
+                              width="8"
+                              height="8"
+                              rx="1"
+                              fill="#66BB6A"
+                            />
+                            <rect
+                              x="20.0762"
+                              width="8"
+                              height="8"
+                              rx="1"
+                              fill="#4CAF50"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="flex-col ml-4">
+                        <h1 class="text-lg font-bold text-green-600 mb-1">
+                          Nivel máximo de Afinidad
+                        </h1>
+                        <p class="text-xs">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing{" "}
+                          <br />
+                          elit. Pellentesque ac libero at ipsum sagittis <br />
+                          bibendum. In hac habitasse platea dictumst.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center justify-center relative cursor-pointer"
+                    id="containerSpanLevel"
+                  >
+                    <svg
+                      class="mx-auto"
+                      width="28"
+                      height="8"
+                      viewBox="0 0 28 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="8" height="8" rx="1" fill="#EF5350" />
+                      <rect x="10" width="8" height="8" rx="1" fill="#E7E7E7" />
+                      <rect x="20" width="8" height="8" rx="1" fill="#E7E7E7" />
+                    </svg>
+                    <div class=" left-20 w-72 hidden bg-white p-3 shadow-md absolute">
+                      <div class="my-auto p-2 bg-unancor-orange bg-opacity-10 rounded-full">
                         <svg
-                          class="mx-auto"
-                          width="29"
-                          height="8"
-                          viewBox="0 0 29 8"
+                          width="30"
+                          height="30"
+                          viewBox="0 0 30 30"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <rect
-                            x="0.0761719"
-                            width="8"
-                            height="8"
-                            rx="1"
-                            fill="#81C784"
-                          />
-                          <rect
-                            x="10.0762"
-                            width="8"
-                            height="8"
-                            rx="1"
-                            fill="#66BB6A"
-                          />
-                          <rect
-                            x="20.0762"
-                            width="8"
-                            height="8"
-                            rx="1"
-                            fill="#4CAF50"
+                          <path
+                            d="M21.875 3.125L28.75 15L21.875 26.875H8.125L1.25 15L8.125 3.125H21.875ZM13.75 18.75V21.25H16.25V18.75H13.75ZM13.75 8.75V16.25H16.25V8.75H13.75Z"
+                            fill="#F44335"
                           />
                         </svg>
                       </div>
-                    </div>
-                    <div class="flex-col ml-4">
-                      <h1 class="text-lg font-bold text-green-600 mb-1">
-                        Nivel máximo de Afinidad
-                      </h1>
-                      <p class="text-xs">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing{" "}
-                        <br />
-                        elit. Pellentesque ac libero at ipsum sagittis <br />
-                        bibendum. In hac habitasse platea dictumst.
-                      </p>
+                      <div class="w-full ml-4 mr-3">
+                        <span class="font-bold text-lg text-unancor-orange">
+                          Niveles de Spam
+                        </span>
+                        <ul class="w-full ml-5" style={{ listStyle: "disc" }}>
+                          <li class="text-sm">DR igual/inferior a 5</li>
+                          <li class="text-sm">Radio TF/CF inferior al 0.4</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  class="flex items-center justify-center relative cursor-pointer"
-                  id="containerSpanLevel"
-                >
-                  <svg
-                    class="mx-auto"
-                    width="28"
-                    height="8"
-                    viewBox="0 0 28 8"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="8" height="8" rx="1" fill="#EF5350" />
-                    <rect x="10" width="8" height="8" rx="1" fill="#E7E7E7" />
-                    <rect x="20" width="8" height="8" rx="1" fill="#E7E7E7" />
-                  </svg>
-                  <div class=" left-20 w-72 hidden bg-white p-3 shadow-md absolute">
-                    <div class="my-auto p-2 bg-unancor-orange bg-opacity-10 rounded-full">
-                      <svg
-                        width="30"
-                        height="30"
-                        viewBox="0 0 30 30"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M21.875 3.125L28.75 15L21.875 26.875H8.125L1.25 15L8.125 3.125H21.875ZM13.75 18.75V21.25H16.25V18.75H13.75ZM13.75 8.75V16.25H16.25V8.75H13.75Z"
-                          fill="#F44335"
-                        />
-                      </svg>
+                  <div class="flex items-center justify-center">84501</div>
+                  <div class="flex items-center justify-center">6</div>
+                  <div class="flex items-center justify-center">2.2370</div>
+                  <div class="flex items-center justify-center">Blog</div>
+                  <div class="flex items-center justify-center">inicial</div>
+                  <div class="flex items-center justify-center">19/03/2021</div>
+                  <div class="flex items-center justify-center p-2 relative">
+                    <div class="w-96 bg-white hidden absolute shadow-md p-4 right-28">
+                      <div class="bg-unancor-blue bg-opacity-20 rounded-full w-12 h-12 my-auto flex m-1 mr-4">
+                        <svg
+                          class="my-auto mx-auto"
+                          width="30"
+                          height="30"
+                          viewBox="0 0 30 30"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M23.75 6.25V23.75H6.25V6.25H23.75ZM23.75 3.75H6.25C4.875 3.75 3.75 4.875 3.75 6.25V23.75C3.75 25.125 4.875 26.25 6.25 26.25H23.75C25.125 26.25 26.25 25.125 26.25 23.75V6.25C26.25 4.875 25.125 3.75 23.75 3.75Z"
+                            fill="#2D72C9"
+                          />
+                          <path
+                            d="M17.5 21.25H8.75V18.75H17.5V21.25ZM21.25 16.25H8.75V13.75H21.25V16.25ZM21.25 11.25H8.75V8.75H21.25V11.25Z"
+                            fill="#2D72C9"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <h1 class="font-bold text-lg text-unancor-blue">
+                          Compra un Art&iacute;culo
+                        </h1>
+                        <p class="text-unancor-blue text-xs">
+                          Compra un artículo para tu sitio web con un solo{" "}
+                          <br />
+                          click, tú escoges la tématica y nosotros hacemos el{" "}
+                          <br />
+                          resto así de fácil y rápido.
+                        </p>
+                      </div>
                     </div>
-                    <div class="w-full ml-4 mr-3">
-                      <span class="font-bold text-lg text-unancor-orange">
-                        Niveles de Spam
-                      </span>
-                      <ul class="w-full ml-5" style="list-style: disc;">
-                        <li class="text-sm">DR igual/inferior a 5</li>
-                        <li class="text-sm">Radio TF/CF inferior al 0.4</li>
-                      </ul>
-                    </div>
+                    <button class="bg-unancor-blue rounded-sm w-full py-1 text-white font-semibold">
+                      12.000 &euro;
+                    </button>
                   </div>
-                </div>
-                <div class="flex items-center justify-center">84501</div>
-                <div class="flex items-center justify-center">6</div>
-                <div class="flex items-center justify-center">2.2370</div>
-                <div class="flex items-center justify-center">Blog</div>
-                <div class="flex items-center justify-center">inicial</div>
-                <div class="flex items-center justify-center">19/03/2021</div>
-                <div class="flex items-center justify-center p-2 relative">
-                  <div class="w-96 bg-white hidden absolute shadow-md p-4 right-28">
-                    <div class="bg-unancor-blue bg-opacity-20 rounded-full w-12 h-12 my-auto flex m-1 mr-4">
-                      <svg
-                        class="my-auto mx-auto"
-                        width="30"
-                        height="30"
-                        viewBox="0 0 30 30"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M23.75 6.25V23.75H6.25V6.25H23.75ZM23.75 3.75H6.25C4.875 3.75 3.75 4.875 3.75 6.25V23.75C3.75 25.125 4.875 26.25 6.25 26.25H23.75C25.125 26.25 26.25 25.125 26.25 23.75V6.25C26.25 4.875 25.125 3.75 23.75 3.75Z"
-                          fill="#2D72C9"
-                        />
-                        <path
-                          d="M17.5 21.25H8.75V18.75H17.5V21.25ZM21.25 16.25H8.75V13.75H21.25V16.25ZM21.25 11.25H8.75V8.75H21.25V11.25Z"
-                          fill="#2D72C9"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <h1 class="font-bold text-lg text-unancor-blue">
-                        Compra un Art&iacute;culo
-                      </h1>
-                      <p class="text-unancor-blue text-xs">
-                        Compra un artículo para tu sitio web con un solo <br />
-                        click, tú escoges la tématica y nosotros hacemos el{" "}
-                        <br />
-                        resto así de fácil y rápido.
-                      </p>
-                    </div>
+                  <div class="flex items-center justify-center p-2">
+                    <button class="bg-unancor-orange rounded-sm w-full py-1 text-white font-semibold">
+                      255 &euro;
+                    </button>
                   </div>
-                  <button class="bg-unancor-blue rounded-sm w-full py-1 text-white font-semibold">
-                    12.000 &euro;
-                  </button>
-                </div>
-                <div class="flex items-center justify-center p-2">
-                  <button class="bg-unancor-orange rounded-sm w-full py-1 text-white font-semibold">
-                    255 &euro;
-                  </button>
-                </div>
-                <div class="flex items-center justify-center">
-                  <svg
-                    class="mx-auto"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g opacity="0.5">
-                      <path
-                        d="M16 9V19H8V9H16ZM14.5 3H9.5L8.5 4H5V6H19V4H15.5L14.5 3ZM18 7H6V19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7Z"
-                        fill="black"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </template>
+                  <div class="flex items-center justify-center">
+                    <svg
+                      class="mx-auto"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.5">
+                        <path
+                          d="M16 9V19H8V9H16ZM14.5 3H9.5L8.5 4H5V6H19V4H15.5L14.5 3ZM18 7H6V19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7Z"
+                          fill="black"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </>
+              ))}
             </div>
             {/* Pagination */}
-            <div class="inline-flex w-full mt-4" style="height: 9%;">
+            <div class="inline-flex w-full mt-4" style={{ height: "9%" }}>
               <div class="w-1/3">
                 <div class="inline-flex border p-3 py-1">
                   <span class="text-xs font-medium mr-3">

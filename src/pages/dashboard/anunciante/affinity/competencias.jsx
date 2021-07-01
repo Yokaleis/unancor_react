@@ -1,278 +1,25 @@
+import { Link } from "react-router-dom";
+
 function Competencias() {
   return (
-    <div class="bg-gray-200 h-screen relative">
-      <div class="w-full h-16 bg-white absolute z-20 flex">
-        <div class="inline-flex w-full">
-          <div class="w-1/2 inline-flex items-center">
-            <img
-              class="w-40 h-5 mt-2 ml-10"
-              src="/assets/LOGO/image18@2x.svg"
-            />
-            <h1 class="font-semibold text-2xl text-unancor-orange ml-12">
-              miudev.com
-            </h1>
-            <svg
-              class="fill-current h-4 w-4 mt-2 ml-4 mr-3"
-              viewBox="0 0 20 20"
-            >
-              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-            </svg>
-          </div>
-          <div class="w-1/2 inline-flex items-center justify-end pr-6 space-x-3">
-            <h1 class="font-bold text-xl leading-7">
-              Billetera: 35.021 &euro;
-            </h1>
-            <h1 class="font-bold text-xl leading-7">Cr&eacute;dito: 3.502</h1>
-            <div class="relative h-10 w-10">
-              <img
-                class="absolute top-0 left-4 h-5 w-4 z-20"
-                src="/assets/icons-dashboard-anunciante/Ellipse230.svg"
-              />
-              <img
-                class="absolute top-2 left-2 z-10"
-                src="/assets/icons-dashboard-anunciante/Vector.svg"
-              />
-              <img
-                class="w-2 h-2 absolute top-1 left-5 z-30"
-                src="/assets/icons-dashboard-anunciante/5.svg"
-              />
-            </div>
-            <img
-              class="h-5 w-5"
-              src="/assets/icons-dashboard-anunciante/campana.svg"
-            />
-            <img
-              class="h-10 w-10"
-              src="/assets/icons-dashboard-anunciante/Ellipse282.svg"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="bg-unancor-blue w-20 flex flex-col h-full absolute z-10">
-        <div class="flex flex-col mt-5 space-y-5">
-          <div class="mt-20 mx-auto">
-            <a href="/dashboard/anunciante/principal.html">
-              <svg
-                class="mx-auto"
-                width="36"
-                height="40"
-                viewBox="0 0 21 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M19.2652 7H1.62983C1.31492 7 1 6.7 1 6.4V1.6C1 1.3 1.31492 1 1.62983 1H19.3702C19.6851 1 20 1.3 20 1.6V6.5C19.895 6.7 19.5801 7 19.2652 7Z"
-                  stroke="white"
-                  strokeWidth="1.2"
-                  stroke-miterlimit="10"
-                />
-                <path
-                  d="M8.30864 19H1.59259C1.2963 19 1 18.7 1 18.4V10.6C1 10.3 1.2963 10 1.59259 10H8.40741C8.7037 10 9 10.3 9 10.6V18.5C8.90123 18.7 8.60494 19 8.30864 19Z"
-                  stroke="white"
-                  strokeWidth="1.2"
-                  stroke-miterlimit="10"
-                />
-                <path
-                  d="M19.4074 19H12.5926C12.2963 19 12 18.7 12 18.4V10.6C12 10.3 12.2963 10 12.5926 10H19.4074C19.7037 10 20 10.3 20 10.6V18.5C20 18.7 19.7037 19 19.4074 19Z"
-                  stroke="white"
-                  strokeWidth="1.2"
-                  stroke-miterlimit="10"
-                />
-              </svg>
-              <p class="text-xs mx-auto text-white">Dashboard</p>
-            </a>
-          </div>
-          <div class="text-center bg-gray-200 py-2">
-            <a href="/dashboard/anunciante/affinity/">
-              <svg
-                class="mx-auto"
-                width="36"
-                height="40"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12.0816 10.7804C13.0004 10.7804 13.7452 10.0356 13.7452 9.11676C13.7452 8.19796 13.0004 7.45312 12.0816 7.45312C11.1628 7.45312 10.418 8.19796 10.418 9.11676C10.418 10.0356 11.1628 10.7804 12.0816 10.7804Z"
-                  stroke="#2D72C9"
-                  strokeWidth="1.2"
-                  stroke-miterlimit="10"
-                />
-                <path
-                  d="M15.4822 15.0621L15.0731 13.053C14.9095 12.2439 14.1913 11.6621 13.3731 11.6621H13.1458C12.864 11.9076 12.4913 12.0712 12.0822 12.0712C11.6731 12.0712 11.3095 11.9167 11.0186 11.6621H10.6276C9.80038 11.6621 9.09128 12.2439 8.92765 13.053L8.51856 15.0621C8.45492 15.3621 8.68219 15.6348 8.98219 15.6348H15.0095C15.3186 15.6348 15.5458 15.3621 15.4822 15.0621Z"
-                  stroke="#2D72C9"
-                  strokeWidth="1.2"
-                  stroke-miterlimit="10"
-                />
-                <path
-                  d="M3.81836 10.2722V4.77219C3.81836 4.37219 4.14563 4.04492 4.54563 4.04492H9.97291"
-                  stroke="#2D72C9"
-                  strokeWidth="1.2"
-                  stroke-miterlimit="10"
-                />
-                <path
-                  d="M9.91836 19.5011H4.54563C4.14563 19.5011 3.81836 19.1738 3.81836 18.7738V13.9102"
-                  stroke="#2D72C9"
-                  strokeWidth="1.2"
-                  stroke-miterlimit="10"
-                />
-                <path
-                  d="M20.1813 13.9102V18.7829C20.1813 19.1829 19.854 19.5102 19.454 19.5102H13.5449"
-                  stroke="#2D72C9"
-                  strokeWidth="1.2"
-                  stroke-miterlimit="10"
-                />
-                <path
-                  d="M13.5996 4.04492H19.4542C19.8542 4.04492 20.1814 4.37219 20.1814 4.77219V10.2722"
-                  stroke="#2D72C9"
-                  strokeWidth="1.2"
-                  stroke-miterlimit="10"
-                />
-                <path
-                  d="M13.1453 5.63636H10.8544C10.4816 5.63636 10.1816 5.33636 10.1816 4.96364V2.67273C10.1816 2.3 10.4816 2 10.8544 2H13.1453C13.518 2 13.818 2.3 13.818 2.67273V4.96364C13.818 5.33636 13.518 5.63636 13.1453 5.63636Z"
-                  stroke="#2D72C9"
-                  strokeWidth="1.2"
-                  stroke-miterlimit="10"
-                />
-                <path
-                  d="M13.1453 21.0914H10.8544C10.4816 21.0914 10.1816 20.7914 10.1816 20.4187V18.1278C10.1816 17.7551 10.4816 17.4551 10.8544 17.4551H13.1453C13.518 17.4551 13.818 17.7551 13.818 18.1278V20.4187C13.818 20.7914 13.518 21.0914 13.1453 21.0914Z"
-                  stroke="#2D72C9"
-                  strokeWidth="1.2"
-                  stroke-miterlimit="10"
-                />
-                <path
-                  d="M21.3269 13.5914H19.036C18.6633 13.5914 18.3633 13.2914 18.3633 12.9187V10.6278C18.3633 10.2551 18.6633 9.95508 19.036 9.95508H21.3269C21.6996 9.95508 21.9996 10.2551 21.9996 10.6278V12.9187C21.9996 13.2914 21.6996 13.5914 21.3269 13.5914Z"
-                  stroke="#2D72C9"
-                  strokeWidth="1.2"
-                  stroke-miterlimit="10"
-                />
-                <path
-                  d="M4.96364 13.5914H2.67273C2.3 13.5914 2 13.2914 2 12.9187V10.6278C2 10.2551 2.3 9.95508 2.67273 9.95508H4.96364C5.33636 9.95508 5.63636 10.2551 5.63636 10.6278V12.9187C5.63636 13.2914 5.33636 13.5914 4.96364 13.5914Z"
-                  stroke="#2D72C9"
-                  strokeWidth="1.2"
-                  stroke-miterlimit="10"
-                />
-              </svg>
-              <p class="text-xs mx-auto text-unancor-blue">Affinity</p>
-            </a>
-          </div>
-          <div class="text-center">
-            <img
-              class="w-9 h-10 mx-auto"
-              src="/assets/icons-dashboard-anunciante/SVG-w/projectmanager-24px2@2x.svg"
-            />
-            <p class="text-xs mx-auto text-white">Project Manager</p>
-          </div>
-          <div class="text-center">
-            <img
-              class="w-9 h-10 mx-auto"
-              src="/assets/icons-dashboard-anunciante/SVG-w/marcket-24px3@2x.svg"
-            />
-            <p class="text-xs mx-auto text-white">Marketplace</p>
-          </div>
-          <div class="text-center">
-            <img
-              class="w-9 h-10 mx-auto"
-              src="/assets/icons-dashboard-anunciante/SVG-w/booster-24px4@2x.svg"
-            />
-            <p class="text-xs mx-auto text-white">Booster</p>
-          </div>
-          <div class="text-center">
-            <img
-              class="w-9 h-10 mx-auto"
-              src="/assets/icons-dashboard-anunciante/SVG-w/tracker-24px@2x.svg"
-            />
-            <p class="text-xs mx-auto text-white">Tracker</p>
-          </div>
-          <div class="text-center">
-            <img
-              class="w-9 h-10 mx-auto"
-              src="/assets/icons-dashboard-anunciante/SVG-w/control-24px6@2x.svg"
-            />
-            <p class="text-xs mx-auto text-white">Control de enlaces</p>
-          </div>
-          <div class="text-center">
-            <svg
-              class="mx-auto"
-              width="36"
-              height="40"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M3.78 14.25C3.6 13.53 3.5 12.78 3.5 12C3.5 7.03 7.53 3 12.5 3C14.44 3 16.23 3.61 17.7 4.65"
-                stroke="white"
-                strokeWidth="1.2"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-              />
-              <path
-                d="M21.2409 9.85938C21.4109 10.5394 21.5009 11.2594 21.5009 11.9994C21.5009 16.9694 17.4709 20.9994 12.5009 20.9994C10.9509 20.9994 9.48094 20.6094 8.21094 19.9094"
-                stroke="white"
-                strokeWidth="1.2"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-              />
-              <path
-                d="M2 15.75L5 16.5V13.5"
-                stroke="white"
-                strokeWidth="1.2"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M19.2695 9.99984L20.8495 7.33984L22.9795 9.44984"
-                stroke="white"
-                strokeWidth="1.2"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M14.9902 8.5H11.9902C10.8902 8.5 9.99023 9.4 9.99023 10.5C9.99023 11.6 10.8902 12.5 11.9902 12.5H12.9902C14.0902 12.5 14.9902 13.4 14.9902 14.5C14.9902 15.6 14.0902 16.5 12.9902 16.5H9.99023"
-                stroke="white"
-                strokeWidth="1.2"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-              />
-              <path
-                d="M11.4902 6.5V17.5"
-                stroke="white"
-                strokeWidth="1.2"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-              />
-              <path
-                d="M13.4902 6.5V17.5"
-                stroke="white"
-                strokeWidth="1.2"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-              />
-            </svg>
-            <p class="text-xs text-white">Inversi&oacute;n</p>
-          </div>
-        </div>
-      </div>
-      <div class="absolute pt-20 pl-24 pb-4 pr-4 h-full w-full">
-        <div class="bg-white h-full flex flex-col p-10 space-y-6">
-          <div class="inline-flex space-x-4 justify-end">
-            <a
-              class="ml-1 p-2 px-10 text-sm bg-gray-200 font-bold"
-              href="/dashboard/anunciante/affinity/propuestos.html"
+    <div className="bg-gray-200 h-screen relative">
+      <div className="absolute pt-20 pl-24 pb-4 pr-4 h-full w-full">
+        <div className="bg-white h-full flex flex-col p-10 space-y-6">
+          <div className="inline-flex space-x-4 justify-end">
+            <Link
+              className="ml-1 p-2 px-10 text-sm bg-gray-200 font-bold"
+              to="/HomeSerps/Propuestos"
             >
               Propuesta
-            </a>
-            <button class="p-2 px-10 text-sm cursor-pointer bg-unancor-blue font-bold text-white">
+            </Link>
+            <button className="p-2 px-10 text-sm cursor-pointer bg-unancor-blue font-bold text-white">
               Competencia
             </button>
-            <button class="p-2 px-10 text-sm bg-gray-200 font-bold ">
+            <button className="p-2 px-10 text-sm bg-gray-200 font-bold ">
               SERP
             </button>
             <svg
-              class="mx-auto my-auto float-right"
+              className="mx-auto my-auto float-right"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -286,25 +33,24 @@ function Competencias() {
             </svg>
           </div>
           <div
-            class="inline-flex items-start space-x-4"
-            style="height: 7%;"
-            id="tab"
+            className="inline-flex items-start space-x-4"
+            style={{height: "7%"}}
           >
-            <h1 class="text-sm font-medium cursor-pointer">
+            <h1 className="text-sm font-medium cursor-pointer">
               Propuestos
-              <hr class="border-unancor-blue border-4 rounded-xl mt-2" />
+              <hr className="border-unancor-blue border-4 rounded-xl mt-2" />
             </h1>
-            <h1 class="text-sm font-medium opacity-30 cursor-pointer">
+            <h1 className="text-sm font-medium opacity-30 cursor-pointer">
               Analizados
             </h1>
-            <h1 class="text-sm font-medium opacity-30">Descartados</h1>
+            <h1 className="text-sm font-medium opacity-30">Descartados</h1>
           </div>
           {/* Barra de Accion de la tabla */}
-          <div class="inline-flex mt-5" style="height: 7%;">
-            <div class="inline-flex w-1/2">
-              <div class="border flex">
+          <div className="inline-flex mt-5" style={{height: "7%"}}>
+            <div className="inline-flex w-1/2">
+              <div className="border flex">
                 <svg
-                  class="my-auto mx-auto"
+                  className="my-auto mx-auto"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -317,50 +63,20 @@ function Competencias() {
                   />
                 </svg>
                 <input
-                  class="pl-4 pr-6 placeholder-black text-xs font-medium"
+                  className="pl-4 pr-6 placeholder-black text-xs font-medium"
                   type="text"
                   placeholder="Buscar Medio"
                 />
               </div>
             </div>
-            <div class="inline-flex w-1/2 justify-end space-x-4">
-              <div class="border inline-flex px-4 py-2 items-center">
-                <span class="text-xs mr-5">Todos</span>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.41 8.58984L12 13.1698L16.59 8.58984L18 9.99984L12 15.9998L6 9.99984L7.41 8.58984Z"
-                    fill="black"
-                  />
-                </svg>
-              </div>
-              <div class="inline-flex border px-4 py-2 items-center">
-                <span class="text-xs">Nofollow</span>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.41 8.58984L12 13.1698L16.59 8.58984L18 9.99984L12 15.9998L6 9.99984L7.41 8.58984Z"
-                    fill="black"
-                  />
-                </svg>
-              </div>
+            <div className="inline-flex w-1/2 justify-end space-x-4">
               <div
-                class="inline-flex border px-4 py-2 space-x-2 relative cursor-pointer items-center"
+                className="inline-flex border px-4 py-2 space-x-2 relative cursor-pointer items-center"
                 id="buttonAffinity"
               >
-                <span class="text-xs">Afinidad:</span>
+                <span className="text-xs">Afinidad:</span>
                 <svg
-                  class="my-auto"
+                  className="my-auto"
                   width="28"
                   height="8"
                   viewBox="0 0 28 8"
@@ -385,10 +101,10 @@ function Competencias() {
                 </svg>
 
                 <div
-                  class="bg-white p-3 shadow-md absolute flex-col w-36 z-10 top-11 right-0 hidden"
+                  className="bg-white p-3 shadow-md absolute flex-col w-36 z-10 top-11 right-0 hidden"
                   id="windowsAffinity"
                 >
-                  <div class="p-4 hover:bg-gray-100">
+                  <div className="p-4 hover:bg-gray-100">
                     <svg
                       width="28"
                       height="8"
@@ -401,7 +117,7 @@ function Competencias() {
                       <rect x="20" width="8" height="8" rx="1" fill="#4CAF50" />
                     </svg>
                   </div>
-                  <div class="p-4 hover:bg-gray-100">
+                  <div className="p-4 hover:bg-gray-100">
                     <svg
                       width="28"
                       height="8"
@@ -414,7 +130,7 @@ function Competencias() {
                       <rect x="20" width="8" height="8" rx="1" fill="#E7E7E7" />
                     </svg>
                   </div>
-                  <div class="p-4 hover:bg-gray-100">
+                  <div className="p-4 hover:bg-gray-100">
                     <svg
                       width="28"
                       height="8"
@@ -430,10 +146,10 @@ function Competencias() {
                 </div>
                 {/* Menu Affinity */}
               </div>
-              <div class="inline-flex border px-4 py-2 space-x-2 items-center">
-                <span class="text-xs">Spam</span>
+              <div className="inline-flex border px-4 py-2 space-x-2 items-center">
+                <span className="text-xs">Spam</span>
                 <svg
-                  class="my-auto"
+                  className="my-auto"
                   width="28"
                   height="8"
                   viewBox="0 0 28 8"
@@ -458,18 +174,18 @@ function Competencias() {
                 </svg>
               </div>
               <div
-                class="inline-flex border px-2 py-2 relative"
+                className="inline-flex border px-2 py-2 relative"
                 id="buttonFilter"
               >
                 {/* Boton de filtros */}
                 <input
-                  class="placeholder-black opacity-50 text-xs w-20"
+                  className="placeholder-black opacity-50 text-xs w-20"
                   type="text"
                   placeholder="Filtros"
                 />
                 <div>
                   <svg
-                    class="ml-2"
+                    className="ml-2"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -483,10 +199,10 @@ function Competencias() {
                   </svg>
                 </div>
                 <div
-                  class="p-3 bg-white z-10 hidden text-xs w-52 shadow-md top-16 right-0"
+                  className="p-3 bg-white z-10 hidden text-xs w-52 shadow-md top-16 right-0"
                   id="windowsFilter"
                 >
-                  <div class="hover:text-unancor-blue hover:bg-gray-100 py-2 inline-flex items-center justify-center group w-full">
+                  <div className="hover:text-unancor-blue hover:bg-gray-100 py-2 inline-flex items-center justify-center group w-full">
                     Aplicar filtro “Filtro Marketing”
                     <svg
                       width="17"
@@ -496,15 +212,15 @@ function Competencias() {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        class="fill-current text-gray-400 group-hover:fill-current group-hover:text-unancor-blue"
+                        className="fill-current text-gray-400 group-hover:fill-current group-hover:text-unancor-blue"
                         d="M9.33317 5.25V11.0833H4.6665V5.25H9.33317ZM8.45817 1.75H5.5415L4.95817 2.33333H2.9165V3.5H11.0832V2.33333H9.0415L8.45817 1.75ZM10.4998 4.08333H3.49984V11.0833C3.49984 11.725 4.02484 12.25 4.6665 12.25H9.33317C9.97484 12.25 10.4998 11.725 10.4998 11.0833V4.08333Z"
                       />
                     </svg>
                   </div>
-                  <div class="hover:text-unancor-blue hover:bg-gray-100 py-2 inline-flex items-center justify-center w-full group">
+                  <div className="hover:text-unancor-blue hover:bg-gray-100 py-2 inline-flex items-center justify-center w-full group">
                     Aplicar “Filtro Negocios”
                     <svg
-                      class="ml-8"
+                      className="ml-8"
                       width="17"
                       height="17"
                       viewBox="0 0 14 14"
@@ -512,21 +228,21 @@ function Competencias() {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        class="fill-current text-gray-400 group-hover:fill-current group-hover:text-unancor-blue"
+                        className="fill-current text-gray-400 group-hover:fill-current group-hover:text-unancor-blue"
                         d="M9.33317 5.25V11.0833H4.6665V5.25H9.33317ZM8.45817 1.75H5.5415L4.95817 2.33333H2.9165V3.5H11.0832V2.33333H9.0415L8.45817 1.75ZM10.4998 4.08333H3.49984V11.0833C3.49984 11.725 4.02484 12.25 4.6665 12.25H9.33317C9.97484 12.25 10.4998 11.725 10.4998 11.0833V4.08333Z"
                       />
                     </svg>
                   </div>
-                  <div class="hover:text-unancor-blue hover:bg-gray-100 py-2 flex items-center justify-center">
+                  <div className="hover:text-unancor-blue hover:bg-gray-100 py-2 flex items-center justify-center">
                     Crear nuevo filtro
                   </div>
                 </div>
                 {/* Fin Boton de filtros */}
               </div>
-              <div class="bg-unancor-blue flex px-2 rounded-sm">
+              <div className="bg-unancor-blue flex px-2 rounded-sm">
                 <svg
                   id="buttonMenuPestallas"
-                  class="my-auto"
+                  className="my-auto"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -540,11 +256,11 @@ function Competencias() {
                 </svg>
               </div>
               <div
-                class="bg-unancor-blue flex px-2 rounded-sm relative  cursor-pointer"
+                className="bg-unancor-blue flex px-2 rounded-sm relative  cursor-pointer"
                 id="more"
               >
                 <svg
-                  class="my-auto"
+                  className="my-auto"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -559,20 +275,20 @@ function Competencias() {
               </div>
             </div>
           </div>
-          <table class="w-full text-xs border">
-            <thead class="bg-gray-200 opacity-50">
-              <th class="py-4 text-left pl-10">Dominio</th>
+          <table className="w-full text-xs border">
+            <thead className="bg-gray-200 opacity-50">
+              <th className="py-4 text-left pl-10">Dominio</th>
               <th>DR</th>
               <th>Eliminar</th>
               <th>Acciones</th>
             </thead>
-            <tbody class="divider-y">
+            <tbody className="divider-y">
               <tr>
-                <td class="py-4">
-                  <div class="inline-flex pl-10">
-                    <span class="text-unancor-blue">significados.com</span>
+                <td className="py-4">
+                  <div className="inline-flex pl-10">
+                    <span className="text-unancor-blue">significados.com</span>
                     <svg
-                      class="ml-4"
+                      className="ml-4"
                       width="14"
                       height="14"
                       viewBox="0 0 14 14"
@@ -588,9 +304,9 @@ function Competencias() {
                     </svg>
                   </div>
                 </td>
-                <td class="text-center">12</td>
+                <td className="text-center">12</td>
                 <td>
-                  <div class="flex items-center justify-center">
+                  <div className="flex items-center justify-center">
                     <svg
                       width="24"
                       height="24"
@@ -605,16 +321,16 @@ function Competencias() {
                     </svg>
                   </div>
                 </td>
-                <td class="text-center uppercase text-unancor-blue">
+                <td className="text-center uppercase text-unancor-blue">
                   Analizar
                 </td>
               </tr>
               <tr>
-                <td class="py-4">
-                  <div class="inline-flex pl-10">
-                    <span class="text-unancor-blue">significados.com</span>
+                <td className="py-4">
+                  <div className="inline-flex pl-10">
+                    <span className="text-unancor-blue">significados.com</span>
                     <svg
-                      class="ml-4"
+                      className="ml-4"
                       width="14"
                       height="14"
                       viewBox="0 0 14 14"
@@ -630,9 +346,9 @@ function Competencias() {
                     </svg>
                   </div>
                 </td>
-                <td class="text-center">12</td>
+                <td className="text-center">12</td>
                 <td>
-                  <div class="flex items-center justify-center">
+                  <div className="flex items-center justify-center">
                     <svg
                       width="24"
                       height="24"
@@ -647,16 +363,16 @@ function Competencias() {
                     </svg>
                   </div>
                 </td>
-                <td class="text-center uppercase text-unancor-blue">
+                <td className="text-center uppercase text-unancor-blue">
                   Analizar
                 </td>
               </tr>
               <tr>
-                <td class="py-4">
-                  <div class="inline-flex pl-10">
-                    <span class="text-unancor-blue">significados.com</span>
+                <td className="py-4">
+                  <div className="inline-flex pl-10">
+                    <span className="text-unancor-blue">significados.com</span>
                     <svg
-                      class="ml-4"
+                      className="ml-4"
                       width="14"
                       height="14"
                       viewBox="0 0 14 14"
@@ -672,9 +388,9 @@ function Competencias() {
                     </svg>
                   </div>
                 </td>
-                <td class="text-center">12</td>
+                <td className="text-center">12</td>
                 <td>
-                  <div class="flex items-center justify-center">
+                  <div className="flex items-center justify-center">
                     <svg
                       width="24"
                       height="24"
@@ -689,16 +405,16 @@ function Competencias() {
                     </svg>
                   </div>
                 </td>
-                <td class="text-center uppercase text-unancor-blue">
+                <td className="text-center uppercase text-unancor-blue">
                   Analizar
                 </td>
               </tr>
               <tr>
-                <td class="py-4">
-                  <div class="inline-flex pl-10">
-                    <span class="text-unancor-blue">significados.com</span>
+                <td className="py-4">
+                  <div className="inline-flex pl-10">
+                    <span className="text-unancor-blue">significados.com</span>
                     <svg
-                      class="ml-4"
+                      className="ml-4"
                       width="14"
                       height="14"
                       viewBox="0 0 14 14"
@@ -714,9 +430,9 @@ function Competencias() {
                     </svg>
                   </div>
                 </td>
-                <td class="text-center">12</td>
+                <td className="text-center">12</td>
                 <td>
-                  <div class="flex items-center justify-center">
+                  <div className="flex items-center justify-center">
                     <svg
                       width="24"
                       height="24"
@@ -731,16 +447,16 @@ function Competencias() {
                     </svg>
                   </div>
                 </td>
-                <td class="text-center uppercase text-unancor-blue">
+                <td className="text-center uppercase text-unancor-blue">
                   Analizar
                 </td>
               </tr>
               <tr>
-                <td class="py-4">
-                  <div class="inline-flex pl-10">
-                    <span class="text-unancor-blue">significados.com</span>
+                <td className="py-4">
+                  <div className="inline-flex pl-10">
+                    <span className="text-unancor-blue">significados.com</span>
                     <svg
-                      class="ml-4"
+                      className="ml-4"
                       width="14"
                       height="14"
                       viewBox="0 0 14 14"
@@ -756,9 +472,9 @@ function Competencias() {
                     </svg>
                   </div>
                 </td>
-                <td class="text-center">12</td>
+                <td className="text-center">12</td>
                 <td>
-                  <div class="flex items-center justify-center">
+                  <div className="flex items-center justify-center">
                     <svg
                       width="24"
                       height="24"
@@ -773,14 +489,14 @@ function Competencias() {
                     </svg>
                   </div>
                 </td>
-                <td class="text-center uppercase text-gray-500">Analizar</td>
+                <td className="text-center uppercase text-gray-500">Analizar</td>
               </tr>
               <tr>
-                <td class="py-4">
-                  <div class="inline-flex pl-10">
-                    <span class="text-unancor-blue">significados.com</span>
+                <td className="py-4">
+                  <div className="inline-flex pl-10">
+                    <span className="text-unancor-blue">significados.com</span>
                     <svg
-                      class="ml-4"
+                      className="ml-4"
                       width="14"
                       height="14"
                       viewBox="0 0 14 14"
@@ -796,9 +512,9 @@ function Competencias() {
                     </svg>
                   </div>
                 </td>
-                <td class="text-center">12</td>
+                <td className="text-center">12</td>
                 <td>
-                  <div class="flex items-center justify-center">
+                  <div className="flex items-center justify-center">
                     <svg
                       width="24"
                       height="24"
@@ -813,7 +529,7 @@ function Competencias() {
                     </svg>
                   </div>
                 </td>
-                <td class="text-center uppercase text-gray-500">Analizar</td>
+                <td className="text-center uppercase text-gray-500">Analizar</td>
               </tr>
             </tbody>
           </table>

@@ -1,7 +1,9 @@
 import logo from "../../assets/LOGO/LogoUnancorBlanco.png";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function CheckBoxRegistro({ pageCount, clientType }) {
+  const history = useHistory()
+ 
   const stepsAnunciante = [
     "Regístrate y verifica tu cuenta",
     "Elige tu perfil en Unancor",
@@ -18,21 +20,7 @@ function CheckBoxRegistro({ pageCount, clientType }) {
     "Felicidades! Bienvenido a Unancor",
   ];
 
-  const routesAnunciante = [
-    "/Inicio",
-    "/VerificaTuCuenta",
-    "/CuentaVerificada",
-    "/TipoRegistro",
-  ];
-
-  const routesEditor = [
-    "/Inicio",
-    "/VerificaTuCuenta",
-    "/CrearMedio",
-  ];
-
   const steps = clientType === "anunciante" ? stepsAnunciante : strepsEditor;
-  const routes = clientType === "anunciante" ? routesAnunciante : routesEditor;
   
   return (
     <div className="bg-unancor-blue h-full flex flex-col">
@@ -74,7 +62,7 @@ function CheckBoxRegistro({ pageCount, clientType }) {
           </label>
         ))}
       </div>
-      <Link to={routes[pageCount]} className="mt-32">
+      <div className="mt-32" onClick={() =>  history.goBack()}>
         <label className="flex justify-start items-start ml-16">
           <div className="w-8 h-8 flex flex-shrink-0 justify-center items-center mr-2 focus-within:border-unancor-blue">
             <span className="material-icons-outlined text-white">arrow_back</span>
@@ -83,7 +71,7 @@ function CheckBoxRegistro({ pageCount, clientType }) {
             </div>
           </div>
         </label>
-      </Link>
+      </div>
     </div>
   );
 }

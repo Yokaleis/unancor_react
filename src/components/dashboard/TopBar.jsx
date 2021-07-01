@@ -88,26 +88,31 @@ function TopBar() {
           <h1 className="font-bold text-base leading-7">
             Billetera: 35.021 &euro;
           </h1>
-          <h1 className="font-bold text-xl leading-7">Cr&eacute;dito: 3.502</h1>
+          <h1 className="font-bold text-base leading-7">Cr&eacute;dito: 3.502</h1>
           <div className="relative h-10 w-10">
             <img
+              alt="Circle"
               className="absolute top-0 left-4 h-5 w-4 z-20"
               src={Circle}
             />
             <img
+              alt="Vector"
               className="absolute top-2 left-2 z-10"
               src={vector}
             />
             <img
+              alt="Cinco"
               className="w-2 h-2 absolute top-1 left-5 z-30"
               src={Cinco}
             />
           </div>
           <img
+            alt="Campana"
             className="h-5 w-5"
             src={Campana}
           />
           <img
+            alt="PerfilIMage"
             className="h-10 w-10"
             src={PerfilImage}
           />

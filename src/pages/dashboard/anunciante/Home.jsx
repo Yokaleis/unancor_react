@@ -1,12 +1,10 @@
-import Topbar from "../../../components/dashboard/TopBar";
-import Sidebar from "../../../components/dashboard/Sidebar";
 import Banner from "../../../assets/bg-banner.jpg";
 import Arrow from "../../../assets/icons-dashboard-anunciante/arrow.svg";
 import File from "../../../assets/icons-dashboard-anunciante/file.svg";
 import blackLink from "../../../assets/icons-dashboard-anunciante/link_black_24dp1.svg";
 import letterC from "../../../assets/C.svg";
-import Chart from "chart.js/auto";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import Grafica from "../../../components/dashboard/Grafica"
 
 function ButtonMenuGridSee() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,83 +40,6 @@ function ButtonMenuGridSee() {
   );
 }
 
-function Grafica() {
-  useEffect(() => {
-    let ctx = document.getElementById("estadisticaproyecto").getContext("2d");
-
-    let estadisticaproyecto = new Chart(ctx, {
-      type: "line",
-      data: {
-        labels: ["1", "2", "3", "4", "5"],
-        datasets: [
-          {
-            label: "",
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: ["rgba(45, 114, 201)"],
-            borderColor: ["rgba(45, 114, 201)"],
-            tension: 0.5,
-            borderWidth: 2,
-          },
-          {
-            label: "",
-            data: [23, 5, 2, 3],
-            backgroundColor: ["rgba(178, 223, 138)"],
-            borderColor: ["rgba(178, 223, 138)"],
-            tension: 0.5,
-            borderWidth: 2,
-          },
-          {
-            label: "",
-            data: [10, 3, 5, 2, 3, 23],
-            backgroundColor: ["rgba(166, 206, 277)"],
-            borderColor: ["rgba(166, 206, 277)"],
-            tension: 0.5,
-            borderWidth: 2,
-          },
-        ],
-      },
-      options: {
-        plugins: {
-          legend: {
-            display: false,
-          },
-        },
-        scales: {
-          y: {
-            ticks: {
-              font: {
-                size: 8,
-              },
-            },
-            beginAtZero: false,
-          },
-          x: {
-            ticks: {
-              font: {
-                size: 8,
-              },
-            },
-          },
-        },
-      },
-    });
-    return () => {
-      estadisticaproyecto.destroy();
-    };
-  }, [0]);
-
-  return (
-    <div className="relative">
-      <canvas
-        id="estadisticaproyecto"
-        width="90"
-        height="50"
-      />
-      <ButtonMenuGridSee/>
-    </div>
-    
-  );
-}
 
 function Home() {
   const [seeType, setSeeType] = useState("grid"); // table or grid
@@ -127,8 +48,6 @@ function Home() {
   };
   return (
     <div className="bg-gray-200 h-screen relative">
-      <Topbar />
-      <Sidebar />
       <div className="grid grid-cols-3 gap-4 absolute h-full pl-24 pr-4 pt-20 pb-8 w-full">
         <div className="col-span-2 flex flex-col">
           <div
@@ -315,7 +234,7 @@ function Home() {
                         <td className="text-center font-bold p-2">100</td>
                         <td className="relative">
                           <div className="right-10 absolute top-5">
-                            <ButtonMenuGridSee/>
+                            <ButtonMenuGridSee />
                           </div>
                         </td>
                       </tr>
@@ -328,7 +247,10 @@ function Home() {
             {seeType === "grid" && (
               <div className="px-3 gap-2 grid grid-cols-4">
                 <div className="border p-2 relative">
-                  <Grafica />
+                  <div className="relative">
+                    <ButtonMenuGridSee />
+                    <Grafica />
+                  </div>
                   <div>
                     <span className="text-3xl font-bold">C</span>
                     <span className="text-sm text-unancor-blue font-bold ml-1">
@@ -415,13 +337,13 @@ function Home() {
                   <th className="font-medium">
                     <div className="flex items-center justify-center">
                       <span className="opacity-50">Tr&aacute;fico</span>
-                      <img className="ml-1" src={Arrow} />
+                      <img className="ml-1" src={Arrow} alt="Arrow" />
                     </div>
                   </th>
                   <th className="font-medium ">
                     <div className="flex items-center justify-center">
                       <span className="opacity-50">DR</span>
-                      <img className="ml-1" src={Arrow} />
+                      <img className="ml-1" src={Arrow} alt="Arrow" />
                     </div>
                   </th>
                   <th className="font-medium opacity-50">
@@ -429,16 +351,16 @@ function Home() {
                   </th>
                   <th className="font-medium">
                     <div className="flex items-center justify-center">
-                      <img className="mr-1" src={File} />
+                      <img className="mr-1" src={File} alt="File" />
                       <span className="opacity-50">Art&iacute;culo</span>
-                      <img className="ml-1" src={Arrow} />
+                      <img className="ml-1" src={Arrow} alt="Arrow" />
                     </div>
                   </th>
                   <th className="font-medium px-3">
                     <div className="flex items-center justify-center">
-                      <img className="mr-1" src={blackLink} />
+                      <img className="mr-1" src={blackLink} alt="BlackLink" />
                       <span className="opacity-50">Enlace</span>
-                      <img className="ml-1" src={Arrow} />
+                      <img className="ml-1" src={Arrow} alt="Arrow" />
                     </div>
                   </th>
                 </tr>

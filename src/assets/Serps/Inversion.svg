@@ -1,0 +1,57 @@
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.78 14.25C3.6 13.53 3.5 12.78 3.5 12C3.5 7.03 7.53 3 12.5 3C14.44 3 16.23 3.61 17.7 4.65"
+                stroke="white"
+                stroke-width="1.2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+              />
+              <path
+                d="M21.2409 9.85938C21.4109 10.5394 21.5009 11.2594 21.5009 11.9994C21.5009 16.9694 17.4709 20.9994 12.5009 20.9994C10.9509 20.9994 9.48094 20.6094 8.21094 19.9094"
+                stroke="white"
+                stroke-width="1.2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+              />
+              <path
+                d="M2 15.75L5 16.5V13.5"
+                stroke="white"
+                stroke-width="1.2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M19.2695 9.99984L20.8495 7.33984L22.9795 9.44984"
+                stroke="white"
+                stroke-width="1.2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M14.9902 8.5H11.9902C10.8902 8.5 9.99023 9.4 9.99023 10.5C9.99023 11.6 10.8902 12.5 11.9902 12.5H12.9902C14.0902 12.5 14.9902 13.4 14.9902 14.5C14.9902 15.6 14.0902 16.5 12.9902 16.5H9.99023"
+                stroke="white"
+                stroke-width="1.2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+              />
+              <path
+                d="M11.4902 6.5V17.5"
+                stroke="white"
+                stroke-width="1.2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+              />
+              <path
+                d="M13.4902 6.5V17.5"
+                stroke="white"
+                stroke-width="1.2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+              />
+            </svg>
