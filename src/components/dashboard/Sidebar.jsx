@@ -48,7 +48,7 @@ const ItemsSidebar = [
   },
   {
     title: "Affinity",
-    link: "/HomeSerps",
+    link: "/HomeSerps/Propuestos",
     Icon: ({ selectedMenu }) => (
       <svg
         width="24"
@@ -207,6 +207,7 @@ const ItemsSidebar = [
   },
   {
     title: "Marketplace",
+    link: "/CompraArticulo",
     Icon: ({ selectedMenu }) => (
       <svg
         className="mx-auto h-9 w-6"
@@ -609,20 +610,22 @@ function Sidebar() {
   return (
     <div className="bg-unancor-blue w-20 flex flex-col h-full absolute z-10">
       <div className="mt-20 w-full space-y-2">
-        {ItemsSidebar.map(({ title, Icon, link }, index) => (
-          <Link
+        {ItemsSidebar.map(({ title, Icon, link }, index) => {
+          let linkBasePath = link ? "/" + link.split("/")[1] : ""
+          return (
+            <Link
             className={
-              basePath === link
+              basePath === linkBasePath
                 ? "cursor-pointer text-center block bg-gray-200"
                 : "cursor-pointer text-center block"
             }
             key={index}
             to={link || ""}
           >
-            <Icon selectedMenu={basePath === link} />
+            <Icon selectedMenu={basePath === linkBasePath} />
             <p
               className={
-                basePath === link
+                basePath === linkBasePath
                   ? "text-xxs mx-auto text-unancor-blue"
                   : "text-xxs mx-auto text-white"
               }
@@ -630,7 +633,8 @@ function Sidebar() {
               {title}
             </p>
           </Link>
-        ))}
+          )
+        })}
       </div>
     </div>
   );

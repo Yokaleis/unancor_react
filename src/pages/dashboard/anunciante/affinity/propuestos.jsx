@@ -1,63 +1,32 @@
+import TopBarAffinity from "../../../../components/dashboard/TopBarAffinity";
+
 function Propuestos() {
   return (
-    <div class="bg-gray-200 h-screen relative">
-      <div class="absolute pt-20 pl-24 pb-4 pr-4 h-full w-full">
-        <div class="bg-white h-full flex flex-col p-4">
+    <div className="bg-gray-200 h-screen relative">
+      <div className="absolute pt-20 pl-24 pb-4 pr-4 h-full w-full">
+        <div className="bg-white h-full flex flex-col p-4">
+          <TopBarAffinity/>
           <div
-            class="inline-flex justify-end py-2 space-x-4"
-            style={{ height: "8%" }}
-          >
-            <button class="px-8 py-2 bg-gray-100 font-sans text-sm font-bold">
-              Propuesta
-            </button>
-            <button class="inline-flex p-2 bg-gray-100 opacity-30 font-sans text-sm font-bold">
-              A&ntilde;adir componente
-              <svg
-                class="mt-1 ml-2"
-                width="14"
-                height="14"
-                viewBox="0 0 14 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="black" />
-              </svg>
-            </button>
-            <svg
-              class="my-auto"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M19.4308 12.98C19.4708 12.66 19.5008 12.34 19.5008 12C19.5008 11.66 19.4708 11.34 19.4308 11.02L21.5408 9.37C21.7308 9.22 21.7808 8.95 21.6608 8.73L19.6608 5.27C19.5708 5.11 19.4008 5.02 19.2208 5.02C19.1608 5.02 19.1008 5.03 19.0508 5.05L16.5608 6.05C16.0408 5.65 15.4808 5.32 14.8708 5.07L14.4908 2.42C14.4608 2.18 14.2508 2 14.0008 2H10.0008C9.75082 2 9.54082 2.18 9.51082 2.42L9.13082 5.07C8.52082 5.32 7.96082 5.66 7.44082 6.05L4.95082 5.05C4.89082 5.03 4.83082 5.02 4.77082 5.02C4.60082 5.02 4.43082 5.11 4.34082 5.27L2.34082 8.73C2.21082 8.95 2.27082 9.22 2.46082 9.37L4.57082 11.02C4.53082 11.34 4.50082 11.67 4.50082 12C4.50082 12.33 4.53082 12.66 4.57082 12.98L2.46082 14.63C2.27082 14.78 2.22082 15.05 2.34082 15.27L4.34082 18.73C4.43082 18.89 4.60082 18.98 4.78082 18.98C4.84082 18.98 4.90082 18.97 4.95082 18.95L7.44082 17.95C7.96082 18.35 8.52082 18.68 9.13082 18.93L9.51082 21.58C9.54082 21.82 9.75082 22 10.0008 22H14.0008C14.2508 22 14.4608 21.82 14.4908 21.58L14.8708 18.93C15.4808 18.68 16.0408 18.34 16.5608 17.95L19.0508 18.95C19.1108 18.97 19.1708 18.98 19.2308 18.98C19.4008 18.98 19.5708 18.89 19.6608 18.73L21.6608 15.27C21.7808 15.05 21.7308 14.78 21.5408 14.63L19.4308 12.98ZM17.4508 11.27C17.4908 11.58 17.5008 11.79 17.5008 12C17.5008 12.21 17.4808 12.43 17.4508 12.73L17.3108 13.86L18.2008 14.56L19.2808 15.4L18.5808 16.61L17.3108 16.1L16.2708 15.68L15.3708 16.36C14.9408 16.68 14.5308 16.92 14.1208 17.09L13.0608 17.52L12.9008 18.65L12.7008 20H11.3008L11.1108 18.65L10.9508 17.52L9.89082 17.09C9.46082 16.91 9.06082 16.68 8.66082 16.38L7.75082 15.68L6.69082 16.11L5.42082 16.62L4.72082 15.41L5.80082 14.57L6.69082 13.87L6.55082 12.74C6.52082 12.43 6.50082 12.2 6.50082 12C6.50082 11.8 6.52082 11.57 6.55082 11.27L6.69082 10.14L5.80082 9.44L4.72082 8.6L5.42082 7.39L6.69082 7.9L7.73082 8.32L8.63082 7.64C9.06082 7.32 9.47082 7.08 9.88082 6.91L10.9408 6.48L11.1008 5.35L11.3008 4H12.6908L12.8808 5.35L13.0408 6.48L14.1008 6.91C14.5308 7.09 14.9308 7.32 15.3308 7.62L16.2408 8.32L17.3008 7.89L18.5708 7.38L19.2708 8.59L18.2008 9.44L17.3108 10.14L17.4508 11.27ZM12.0008 8C9.79082 8 8.00082 9.79 8.00082 12C8.00082 14.21 9.79082 16 12.0008 16C14.2108 16 16.0008 14.21 16.0008 12C16.0008 9.79 14.2108 8 12.0008 8ZM12.0008 14C10.9008 14 10.0008 13.1 10.0008 12C10.0008 10.9 10.9008 10 12.0008 10C13.1008 10 14.0008 10.9 14.0008 12C14.0008 13.1 13.1008 14 12.0008 14Z"
-                fill="#2D72C9"
-              />
-            </svg>
-          </div>
-          <div
-            class="inline-flex items-start space-x-4"
+            className="inline-flex items-start space-x-4"
             style={{ height: "7%" }}
             id="tab"
           >
-            <h1 class="text-sm font-medium cursor-pointer">
+            <h1 className="text-sm font-medium cursor-pointer">
               Propuestos
-              <hr class="border-unancor-blue border-4 rounded-xl mt-2" />
+              <hr className="border-unancor-blue border-4 rounded-xl mt-2" />
             </h1>
-            <h1 class="text-sm font-medium opacity-30 cursor-pointer">
+            <h1 className="text-sm font-medium opacity-30 cursor-pointer">
               Analizados
             </h1>
-            <h1 class="text-sm font-medium opacity-30">Descartados</h1>
+            <h1 className="text-sm font-medium opacity-30">Descartados</h1>
           </div>
           {/* Control Tab */}
           {/* Barra de Accion de la tabla */}
-          <div class="inline-flex mt-5" style={{ height: "7%" }}>
-            <div class="inline-flex w-1/2">
-              <div class="border flex">
+          <div className="inline-flex mt-5" style={{ height: "7%" }}>
+            <div className="inline-flex w-1/2">
+              <div className="border flex">
                 <svg
-                  class="my-auto mx-auto"
+                  className="my-auto mx-auto"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -70,15 +39,15 @@ function Propuestos() {
                   />
                 </svg>
                 <input
-                  class="pl-4 pr-6 placeholder-black text-xs font-medium"
+                  className="pl-4 pr-6 placeholder-black text-xs font-medium"
                   type="text"
                   placeholder="Buscar Medio"
                 />
               </div>
             </div>
-            <div class="inline-flex w-1/2 justify-end space-x-4">
-              <div class="border inline-flex px-4 py-2">
-                <span class="text-xs mr-5 my-auto">Todos</span>
+            <div className="inline-flex w-1/2 justify-end space-x-4">
+              <div className="border inline-flex px-4 py-2">
+                <span className="text-xs mr-5 my-auto">Todos</span>
                 <svg
                   width="24"
                   height="24"
@@ -92,8 +61,8 @@ function Propuestos() {
                   />
                 </svg>
               </div>
-              <div class="inline-flex border px-4 py-2">
-                <span class="text-xs">Nofollow</span>
+              <div className="inline-flex border px-4 py-2">
+                <span className="text-xs">Nofollow</span>
                 <svg
                   width="24"
                   height="24"
@@ -108,12 +77,12 @@ function Propuestos() {
                 </svg>
               </div>
               <div
-                class="inline-flex border px-4 py-2 space-x-2 relative cursor-pointer"
+                className="inline-flex border px-4 py-2 space-x-2 relative cursor-pointer"
                 id="buttonAffinity"
               >
-                <span class="text-xs">Afinidad:</span>
+                <span className="text-xs">Afinidad:</span>
                 <svg
-                  class="my-auto"
+                  className="my-auto"
                   width="28"
                   height="8"
                   viewBox="0 0 28 8"
@@ -138,10 +107,10 @@ function Propuestos() {
                 </svg>
 
                 <div
-                  class="bg-white p-3 shadow-md absolute flex-col w-36 z-10 top-11 right-0 hidden"
+                  className="bg-white p-3 shadow-md absolute flex-col w-36 z-10 top-11 right-0 hidden"
                   id="windowsAffinity"
                 >
-                  <div class="p-4 hover:bg-gray-100">
+                  <div className="p-4 hover:bg-gray-100">
                     <svg
                       width="28"
                       height="8"
@@ -154,7 +123,7 @@ function Propuestos() {
                       <rect x="20" width="8" height="8" rx="1" fill="#4CAF50" />
                     </svg>
                   </div>
-                  <div class="p-4 hover:bg-gray-100">
+                  <div className="p-4 hover:bg-gray-100">
                     <svg
                       width="28"
                       height="8"
@@ -167,7 +136,7 @@ function Propuestos() {
                       <rect x="20" width="8" height="8" rx="1" fill="#E7E7E7" />
                     </svg>
                   </div>
-                  <div class="p-4 hover:bg-gray-100">
+                  <div className="p-4 hover:bg-gray-100">
                     <svg
                       width="28"
                       height="8"
@@ -183,10 +152,10 @@ function Propuestos() {
                 </div>
                 {/* Menu Affinity */}
               </div>
-              <div class="inline-flex border px-4 py-2 space-x-2">
-                <span class="text-xs">Spam</span>
+              <div className="inline-flex border px-4 py-2 space-x-2">
+                <span className="text-xs">Spam</span>
                 <svg
-                  class="my-auto"
+                  className="my-auto"
                   width="28"
                   height="8"
                   viewBox="0 0 28 8"
@@ -211,18 +180,18 @@ function Propuestos() {
                 </svg>
               </div>
               <div
-                class="inline-flex border px-2 py-2 relative"
+                className="inline-flex border px-2 py-2 relative"
                 id="buttonFilter"
               >
                 {/* Boton de filtros */}
                 <input
-                  class="placeholder-black opacity-50 text-xs w-20"
+                  className="placeholder-black opacity-50 text-xs w-20"
                   type="text"
                   placeholder="Filtros"
                 />
                 <div>
                   <svg
-                    class="ml-2"
+                    className="ml-2"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -236,10 +205,10 @@ function Propuestos() {
                   </svg>
                 </div>
                 <div
-                  class="p-3 bg-white z-10 hidden text-xs w-52 shadow-md top-10 right-0"
+                  className="p-3 bg-white z-10 hidden text-xs w-52 shadow-md top-10 right-0"
                   id="windowsFilter"
                 >
-                  <div class="hover:text-unancor-blue hover:bg-gray-100 py-2 inline-flex items-center justify-center group w-full">
+                  <div className="hover:text-unancor-blue hover:bg-gray-100 py-2 inline-flex items-center justify-center group w-full">
                     Aplicar filtro “Filtro Marketing”
                     <svg
                       width="17"
@@ -249,15 +218,15 @@ function Propuestos() {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        class="fill-current text-gray-400 group-hover:fill-current group-hover:text-unancor-blue"
+                        className="fill-current text-gray-400 group-hover:fill-current group-hover:text-unancor-blue"
                         d="M9.33317 5.25V11.0833H4.6665V5.25H9.33317ZM8.45817 1.75H5.5415L4.95817 2.33333H2.9165V3.5H11.0832V2.33333H9.0415L8.45817 1.75ZM10.4998 4.08333H3.49984V11.0833C3.49984 11.725 4.02484 12.25 4.6665 12.25H9.33317C9.97484 12.25 10.4998 11.725 10.4998 11.0833V4.08333Z"
                       />
                     </svg>
                   </div>
-                  <div class="hover:text-unancor-blue hover:bg-gray-100 py-2 inline-flex items-center justify-center w-full group">
+                  <div className="hover:text-unancor-blue hover:bg-gray-100 py-2 inline-flex items-center justify-center w-full group">
                     Aplicar “Filtro Negocios”
                     <svg
-                      class="ml-8"
+                      className="ml-8"
                       width="17"
                       height="17"
                       viewBox="0 0 14 14"
@@ -265,24 +234,24 @@ function Propuestos() {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        class="fill-current text-gray-400 group-hover:fill-current group-hover:text-unancor-blue"
+                        className="fill-current text-gray-400 group-hover:fill-current group-hover:text-unancor-blue"
                         d="M9.33317 5.25V11.0833H4.6665V5.25H9.33317ZM8.45817 1.75H5.5415L4.95817 2.33333H2.9165V3.5H11.0832V2.33333H9.0415L8.45817 1.75ZM10.4998 4.08333H3.49984V11.0833C3.49984 11.725 4.02484 12.25 4.6665 12.25H9.33317C9.97484 12.25 10.4998 11.725 10.4998 11.0833V4.08333Z"
                       />
                     </svg>
                   </div>
-                  <div class="hover:text-unancor-blue hover:bg-gray-100 py-2 flex items-center justify-center">
+                  <div className="hover:text-unancor-blue hover:bg-gray-100 py-2 flex items-center justify-center">
                     Crear nuevo filtro
                   </div>
                 </div>
                 {/* Fin Boton de filtros */}
                 <div
                   style={{ right: "88px" }}
-                  class="space-y-2 w-48 top-60 absolute text-xs bg-white shadow-md p-3 z-10 flex-col hidden"
+                  className="space-y-2 w-48 top-60 absolute text-xs bg-white shadow-md p-3 z-10 flex-col hidden"
                   id="windowPestallas"
                 >
-                  <div class="text-unancor-blue inline-flex">
+                  <div className="text-unancor-blue inline-flex">
                     <svg
-                      class="mr-3"
+                      className="mr-3"
                       width="14"
                       height="14"
                       viewBox="0 0 14 14"
@@ -296,12 +265,12 @@ function Propuestos() {
                     </svg>
                     Afinidad
                   </div>
-                  <div class="ml-6">Características</div>
-                  <div class="ml-6">Canal de youtube</div>
-                  <div class="ml-6">Emisora</div>
-                  <div class="text-unancor-blue inline-flex w-full">
+                  <div className="ml-6">Características</div>
+                  <div className="ml-6">Canal de youtube</div>
+                  <div className="ml-6">Emisora</div>
+                  <div className="text-unancor-blue inline-flex w-full">
                     <svg
-                      class="mr-3"
+                      className="mr-3"
                       width="14"
                       height="14"
                       viewBox="0 0 14 14"
@@ -315,9 +284,9 @@ function Propuestos() {
                     </svg>
                     Fortalezas
                   </div>
-                  <div class="text-unancor-blue inline-flex w-full">
+                  <div className="text-unancor-blue inline-flex w-full">
                     <svg
-                      class="mr-3"
+                      className="mr-3"
                       width="14"
                       height="14"
                       viewBox="0 0 14 14"
@@ -331,9 +300,9 @@ function Propuestos() {
                     </svg>
                     Idioma
                   </div>
-                  <div class="text-unancor-blue inline-flex w-full">
+                  <div className="text-unancor-blue inline-flex w-full">
                     <svg
-                      class="mr-3"
+                      className="mr-3"
                       width="14"
                       height="14"
                       viewBox="0 0 14 14"
@@ -347,9 +316,9 @@ function Propuestos() {
                     </svg>
                     Nivel de spam
                   </div>
-                  <div class="text-unancor-blue inline-flex w-full">
+                  <div className="text-unancor-blue inline-flex w-full">
                     <svg
-                      class="mr-3"
+                      className="mr-3"
                       width="14"
                       height="14"
                       viewBox="0 0 14 14"
@@ -363,13 +332,13 @@ function Propuestos() {
                     </svg>
                     Medio
                   </div>
-                  <div class="ml-6">Streaming</div>
+                  <div className="ml-6">Streaming</div>
                 </div>
               </div>
-              <div class="bg-unancor-blue flex px-2 rounded-sm">
+              <div className="bg-unancor-blue flex px-2 rounded-sm">
                 <svg
                   id="buttonMenuPestallas"
-                  class="my-auto"
+                  className="my-auto"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -383,11 +352,11 @@ function Propuestos() {
                 </svg>
               </div>
               <div
-                class="bg-unancor-blue flex px-2 rounded-sm relative  cursor-pointer"
+                className="bg-unancor-blue flex px-2 rounded-sm relative  cursor-pointer"
                 id="more"
               >
                 <svg
-                  class="my-auto"
+                  className="my-auto"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -400,41 +369,41 @@ function Propuestos() {
                   />
                 </svg>
                 <div
-                  class="hidden shadow-md space-y-3 z-10 absolute bg-white right-0 top-10 p-2 w-44"
+                  className="hidden shadow-md space-y-3 z-10 absolute bg-white right-0 top-10 p-2 w-44"
                   id="moreWindow"
                 >
-                  <p class="p-2 text-xs hover:text-unancor-blue hover:bg-gray-100">
+                  <p className="p-2 text-xs hover:text-unancor-blue hover:bg-gray-100">
                     Editar
                   </p>
-                  <p class="p-2 text-xs hover:text-unancor-blue hover:bg-gray-100">
+                  <p className="p-2 text-xs hover:text-unancor-blue hover:bg-gray-100">
                     Eliminar
                   </p>
-                  <p class="p-2 text-xs hover:text-unancor-blue hover:bg-gray-100">
+                  <p className="p-2 text-xs hover:text-unancor-blue hover:bg-gray-100">
                     Seleccionar todos
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="py-4" style={{ height: "80%" }}>
+          <div className="py-4" style={{ height: "80%" }}>
             {/* Cabezera */}
-            <div class="grid grid-cols-13 text-xs" style={{ height: "7%" }}>
-              <div class="flex justify-center items-center opacity-50">
+            <div className="grid grid-cols-13 text-xs" style={{ height: "7%" }}>
+              <div className="flex justify-center items-center opacity-50">
                 Seleccionar
               </div>
-              <div class="flex justify-center items-center opacity-50">
+              <div className="flex justify-center items-center opacity-50">
                 Medio
               </div>
-              <div class="flex justify-center items-center opacity-50">
+              <div className="flex justify-center items-center opacity-50">
                 Afinidad
               </div>
-              <div class="flex justify-center items-center opacity-50">
+              <div className="flex justify-center items-center opacity-50">
                 Nivel de Spam
               </div>
-              <div class="inline-flex items-center justify-center opacity-50">
+              <div className="inline-flex items-center justify-center opacity-50">
                 Tr&aacute;fico
                 <svg
-                  class="ml-1"
+                  className="ml-1"
                   width="14"
                   height="28"
                   viewBox="0 0 14 28"
@@ -451,10 +420,10 @@ function Propuestos() {
                   />
                 </svg>
               </div>
-              <div class="inline-flex items-center justify-center opacity-50">
+              <div className="inline-flex items-center justify-center opacity-50">
                 DR
                 <svg
-                  class="ml-1"
+                  className="ml-1"
                   width="14"
                   height="28"
                   viewBox="0 0 14 28"
@@ -471,10 +440,10 @@ function Propuestos() {
                   />
                 </svg>
               </div>
-              <div class="inline-flex items-center justify-center opacity-50">
+              <div className="inline-flex items-center justify-center opacity-50">
                 Sistrix
                 <svg
-                  class="ml-1"
+                  className="ml-1"
                   width="14"
                   height="28"
                   viewBox="0 0 14 28"
@@ -491,13 +460,13 @@ function Propuestos() {
                   />
                 </svg>
               </div>
-              <div class="flex justify-center items-center opacity-50">
+              <div className="flex justify-center items-center opacity-50">
                 Tipo
               </div>
-              <div class="flex justify-center items-center opacity-50">
+              <div className="flex justify-center items-center opacity-50">
                 Origen
               </div>
-              <div class="inline-flex items-center justify-center opacity-50">
+              <div className="inline-flex items-center justify-center opacity-50">
                 Fecha
                 <svg
                   width="14"
@@ -516,9 +485,9 @@ function Propuestos() {
                   />
                 </svg>
               </div>
-              <div class="inline-flex items-center justify-center opacity-50">
+              <div className="inline-flex items-center justify-center opacity-50">
                 <svg
-                  class="mr-1"
+                  className="mr-1"
                   width="14"
                   height="14"
                   viewBox="0 0 14 14"
@@ -538,7 +507,7 @@ function Propuestos() {
                 </svg>
                 Art&iacute;culo
                 <svg
-                  class="ml-1"
+                  className="ml-1"
                   width="14"
                   height="28"
                   viewBox="0 0 14 28"
@@ -555,9 +524,9 @@ function Propuestos() {
                   />
                 </svg>
               </div>
-              <div class="inline-flex items-center justify-center opacity-50">
+              <div className="inline-flex items-center justify-center opacity-50">
                 <svg
-                  class="mr-1"
+                  className="mr-1"
                   width="14"
                   height="14"
                   viewBox="0 0 14 14"
@@ -573,7 +542,7 @@ function Propuestos() {
                 </svg>
                 Enlace
                 <svg
-                  class="ml-1"
+                  className="ml-1"
                   width="14"
                   height="28"
                   viewBox="0 0 14 28"
@@ -590,14 +559,14 @@ function Propuestos() {
                   />
                 </svg>
               </div>
-              <div class="flex justify-center items-center opacity-50">
+              <div className="flex justify-center items-center opacity-50">
                 Eliminar
               </div>
               {/* Fila de ejemplo del cuerpo para ajustar los width de la cabezera a las columnnas del cuerpo */}
-              <div class="flex justify-center invisible h-0">
+              <div className="flex justify-center invisible h-0">
                 <input type="checkbox" />
               </div>
-              <div class="inline-flex justify-center items-center invisible h-0">
+              <div className="inline-flex justify-center items-center invisible h-0">
                 <svg
                   width="14"
                   height="14"
@@ -610,7 +579,7 @@ function Propuestos() {
                     fill="#2D72C9"
                   />
                 </svg>
-                <span class="font-bold text-xs text-unancor-blue">
+                <span className="font-bold text-xs text-unancor-blue">
                   enconosublime.com
                 </span>
                 <svg
@@ -628,9 +597,9 @@ function Propuestos() {
                   </g>
                 </svg>
               </div>
-              <div class="flex items-center justify-center invisible h-0">
+              <div className="flex items-center justify-center invisible h-0">
                 <svg
-                  class="mx-auto"
+                  className="mx-auto"
                   width="28"
                   height="8"
                   viewBox="0 0 28 8"
@@ -642,9 +611,9 @@ function Propuestos() {
                   <rect x="20" width="8" height="8" rx="1" fill="#E7E7E7" />
                 </svg>
               </div>
-              <div class="flex items-center justify-center invisible h-0">
+              <div className="flex items-center justify-center invisible h-0">
                 <svg
-                  class="mx-auto"
+                  className="mx-auto"
                   width="28"
                   height="8"
                   viewBox="0 0 28 8"
@@ -656,37 +625,37 @@ function Propuestos() {
                   <rect x="20" width="8" height="8" rx="1" fill="#E7E7E7" />
                 </svg>
               </div>
-              <div class="flex items-center justify-center invisible h-0">
+              <div className="flex items-center justify-center invisible h-0">
                 84501
               </div>
-              <div class="flex items-center justify-center invisible h-0">
+              <div className="flex items-center justify-center invisible h-0">
                 6
               </div>
-              <div class="flex items-center justify-center invisible h-0">
+              <div className="flex items-center justify-center invisible h-0">
                 2.2370
               </div>
-              <div class="flex items-center justify-center invisible h-0">
+              <div className="flex items-center justify-center invisible h-0">
                 Blog
               </div>
-              <div class="flex items-center justify-center invisible h-0">
+              <div className="flex items-center justify-center invisible h-0">
                 inicial
               </div>
-              <div class="flex items-center justify-center invisible h-0">
+              <div className="flex items-center justify-center invisible h-0">
                 19/03/2021
               </div>
-              <div class="flex items-center justify-center invisible h-0">
-                <button class="bg-unancor-blue rounded-sm w-full text-white font-semibold">
+              <div className="flex items-center justify-center invisible h-0">
+                <button className="bg-unancor-blue rounded-sm w-full text-white font-semibold">
                   12.000 &euro;
                 </button>
               </div>
-              <div class="flex items-center justify-center invisible h-0">
-                <button class="bg-unancor-orange rounded-sm w-full text-white font-semibold">
+              <div className="flex items-center justify-center invisible h-0">
+                <button className="bg-unancor-orange rounded-sm w-full text-white font-semibold">
                   255 &euro;
                 </button>
               </div>
-              <div class="flex items-center justify-center invisible h-0">
+              <div className="flex items-center justify-center invisible h-0">
                 <svg
-                  class="mx-auto"
+                  className="mx-auto"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -704,26 +673,26 @@ function Propuestos() {
             </div>
             {/* Cuerpo de la tabla */}
             <div
-              class="grid grid-cols-13 text-xs overflow-scroll"
+              className="grid grid-cols-13 text-xs overflow-scroll"
               style={{ height: "84%" }}
             >
               {/* Cabezera de ejemplo para ajustar los width de las columnas del cuerpo */}
-              <div class="flex justify-center items-center opacity-50 invisible h-0">
+              <div className="flex justify-center items-center opacity-50 invisible h-0">
                 Seleccionar
               </div>
-              <div class="flex justify-center items-center opacity-50 invisible h-0">
+              <div className="flex justify-center items-center opacity-50 invisible h-0">
                 Medio
               </div>
-              <div class="flex justify-center items-center opacity-50 invisible h-0">
+              <div className="flex justify-center items-center opacity-50 invisible h-0">
                 Afinidad
               </div>
-              <div class="flex justify-center items-center opacity-50 invisible h-0">
+              <div className="flex justify-center items-center opacity-50 invisible h-0">
                 Nivel de Spam
               </div>
-              <div class="inline-flex items-center justify-center opacity-50 invisible h-0">
+              <div className="inline-flex items-center justify-center opacity-50 invisible h-0">
                 Tr&aacute;fico
                 <svg
-                  class="ml-1"
+                  className="ml-1"
                   width="14"
                   height="28"
                   viewBox="0 0 14 28"
@@ -740,10 +709,10 @@ function Propuestos() {
                   />
                 </svg>
               </div>
-              <div class="inline-flex items-center justify-center opacity-50 invisible h-0">
+              <div className="inline-flex items-center justify-center opacity-50 invisible h-0">
                 DR
                 <svg
-                  class="ml-1"
+                  className="ml-1"
                   width="14"
                   height="28"
                   viewBox="0 0 14 28"
@@ -760,10 +729,10 @@ function Propuestos() {
                   />
                 </svg>
               </div>
-              <div class="inline-flex items-center justify-center opacity-50 invisible h-0">
+              <div className="inline-flex items-center justify-center opacity-50 invisible h-0">
                 Sistrix
                 <svg
-                  class="ml-1"
+                  className="ml-1"
                   width="14"
                   height="28"
                   viewBox="0 0 14 28"
@@ -780,13 +749,13 @@ function Propuestos() {
                   />
                 </svg>
               </div>
-              <div class="flex justify-center items-center opacity-50 invisible h-0">
+              <div className="flex justify-center items-center opacity-50 invisible h-0">
                 Tipo
               </div>
-              <div class="flex justify-center items-center opacity-50 invisible h-0">
+              <div className="flex justify-center items-center opacity-50 invisible h-0">
                 Origen
               </div>
-              <div class="inline-flex items-center justify-center opacity-50 invisible h-0">
+              <div className="inline-flex items-center justify-center opacity-50 invisible h-0">
                 Fecha
                 <svg
                   width="14"
@@ -805,9 +774,9 @@ function Propuestos() {
                   />
                 </svg>
               </div>
-              <div class="inline-flex items-center justify-center opacity-50 invisible h-0">
+              <div className="inline-flex items-center justify-center opacity-50 invisible h-0">
                 <svg
-                  class="mr-1"
+                  className="mr-1"
                   width="14"
                   height="14"
                   viewBox="0 0 14 14"
@@ -827,7 +796,7 @@ function Propuestos() {
                 </svg>
                 Art&iacute;culo
                 <svg
-                  class="ml-1"
+                  className="ml-1"
                   width="14"
                   height="28"
                   viewBox="0 0 14 28"
@@ -844,9 +813,9 @@ function Propuestos() {
                   />
                 </svg>
               </div>
-              <div class="inline-flex items-center justify-center opacity-50 invisible h-0">
+              <div className="inline-flex items-center justify-center opacity-50 invisible h-0">
                 <svg
-                  class="mr-1"
+                  className="mr-1"
                   width="14"
                   height="14"
                   viewBox="0 0 14 14"
@@ -862,7 +831,7 @@ function Propuestos() {
                 </svg>
                 Enlace
                 <svg
-                  class="ml-1"
+                  className="ml-1"
                   width="14"
                   height="28"
                   viewBox="0 0 14 28"
@@ -879,23 +848,24 @@ function Propuestos() {
                   />
                 </svg>
               </div>
-              <div class="flex justify-center items-center opacity-50 invisible h-4">
+              <div className="flex justify-center items-center opacity-50 invisible h-4">
                 Eliminar
               </div>
 
               {/* Template usada para generar las filas de la tabla */}
-              {[1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7,].map(() => (
+              {[
+                1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7,
+                1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7,
+              ].map((item, index) => (
                 <>
-                  <div class="flex justify-center">
+                  <div className="flex justify-center">
                     <input type="checkbox" />
                   </div>
-                  <div
-                    class="inline-flex justify-center items-center relative"
-                    id="hoverPublicidad"
-                  >
-                    <div class="left-8 w-40 text-ss text-unancor-blue text-center shadow-md bg-white p-1 hidden">
+                  <div className="inline-flex justify-center items-center relative">
+                    <div className="left-8 w-40 text-ss text-unancor-blue text-center shadow-md bg-white p-1 hidden">
                       Marcado como publicidad
                     </div>
+
                     <svg
                       width="14"
                       height="14"
@@ -908,7 +878,7 @@ function Propuestos() {
                         fill="#2D72C9"
                       />
                     </svg>
-                    <span class="font-bold text-xs text-unancor-blue">
+                    <span className="font-bold text-xs text-unancor-blue">
                       enconosublime.com
                     </span>
                     <svg
@@ -927,11 +897,10 @@ function Propuestos() {
                     </svg>
                   </div>
                   <div
-                    class="flex items-center justify-center relative"
-                    id="hoverAffinity"
+                    className="flex items-center justify-center relative"
                   >
                     <svg
-                      class="mx-auto"
+                      className="mx-auto"
                       width="28"
                       height="8"
                       viewBox="0 0 28 8"
@@ -943,11 +912,11 @@ function Propuestos() {
                       <rect x="20" width="8" height="8" rx="1" fill="#4CAF50" />
                     </svg>
 
-                    <div class="bg-white shadow-md w-96 p-3 absolute z-10 left-16 hidden">
-                      <div class="my-auto mx-auto">
-                        <div class="bg-green-100 rounded-full px-3 py-6">
+                    <div className="bg-white shadow-md w-96 p-3 absolute z-10 left-16 hidden">
+                      <div className="my-auto mx-auto">
+                        <div className="bg-green-100 rounded-full px-3 py-6">
                           <svg
-                            class="mx-auto"
+                            className="mx-auto"
                             width="29"
                             height="8"
                             viewBox="0 0 29 8"
@@ -978,11 +947,11 @@ function Propuestos() {
                           </svg>
                         </div>
                       </div>
-                      <div class="flex-col ml-4">
-                        <h1 class="text-lg font-bold text-green-600 mb-1">
+                      <div className="flex-col ml-4">
+                        <h1 className="text-lg font-bold text-green-600 mb-1">
                           Nivel máximo de Afinidad
                         </h1>
-                        <p class="text-xs">
+                        <p className="text-xs">
                           Lorem ipsum dolor sit amet, consectetur adipiscing{" "}
                           <br />
                           elit. Pellentesque ac libero at ipsum sagittis <br />
@@ -992,11 +961,10 @@ function Propuestos() {
                     </div>
                   </div>
                   <div
-                    class="flex items-center justify-center relative cursor-pointer"
-                    id="containerSpanLevel"
+                    className="flex items-center justify-center relative cursor-pointer"
                   >
                     <svg
-                      class="mx-auto"
+                      className="mx-auto"
                       width="28"
                       height="8"
                       viewBox="0 0 28 8"
@@ -1007,8 +975,8 @@ function Propuestos() {
                       <rect x="10" width="8" height="8" rx="1" fill="#E7E7E7" />
                       <rect x="20" width="8" height="8" rx="1" fill="#E7E7E7" />
                     </svg>
-                    <div class=" left-20 w-72 hidden bg-white p-3 shadow-md absolute">
-                      <div class="my-auto p-2 bg-unancor-orange bg-opacity-10 rounded-full">
+                    <div className=" left-20 w-72 hidden bg-white p-3 shadow-md absolute">
+                      <div className="my-auto p-2 bg-unancor-orange bg-opacity-10 rounded-full">
                         <svg
                           width="30"
                           height="30"
@@ -1022,28 +990,37 @@ function Propuestos() {
                           />
                         </svg>
                       </div>
-                      <div class="w-full ml-4 mr-3">
-                        <span class="font-bold text-lg text-unancor-orange">
+                      <div className="w-full ml-4 mr-3">
+                        <span className="font-bold text-lg text-unancor-orange">
                           Niveles de Spam
                         </span>
-                        <ul class="w-full ml-5" style={{ listStyle: "disc" }}>
-                          <li class="text-sm">DR igual/inferior a 5</li>
-                          <li class="text-sm">Radio TF/CF inferior al 0.4</li>
+                        <ul
+                          className="w-full ml-5"
+                          style={{ listStyle: "disc" }}
+                        >
+                          <li className="text-sm">DR igual/inferior a 5</li>
+                          <li className="text-sm">
+                            Radio TF/CF inferior al 0.4
+                          </li>
                         </ul>
                       </div>
                     </div>
                   </div>
-                  <div class="flex items-center justify-center">84501</div>
-                  <div class="flex items-center justify-center">6</div>
-                  <div class="flex items-center justify-center">2.2370</div>
-                  <div class="flex items-center justify-center">Blog</div>
-                  <div class="flex items-center justify-center">inicial</div>
-                  <div class="flex items-center justify-center">19/03/2021</div>
-                  <div class="flex items-center justify-center p-2 relative">
-                    <div class="w-96 bg-white hidden absolute shadow-md p-4 right-28">
-                      <div class="bg-unancor-blue bg-opacity-20 rounded-full w-12 h-12 my-auto flex m-1 mr-4">
+                  <div className="flex items-center justify-center">84501</div>
+                  <div className="flex items-center justify-center">6</div>
+                  <div className="flex items-center justify-center">2.2370</div>
+                  <div className="flex items-center justify-center">Blog</div>
+                  <div className="flex items-center justify-center">
+                    inicial
+                  </div>
+                  <div className="flex items-center justify-center">
+                    19/03/2021
+                  </div>
+                  <div className="flex items-center justify-center p-2 relative">
+                    <div className="w-96 bg-white hidden absolute shadow-md p-4 right-28">
+                      <div className="bg-unancor-blue bg-opacity-20 rounded-full w-12 h-12 my-auto flex m-1 mr-4">
                         <svg
-                          class="my-auto mx-auto"
+                          className="my-auto mx-auto"
                           width="30"
                           height="30"
                           viewBox="0 0 30 30"
@@ -1061,10 +1038,10 @@ function Propuestos() {
                         </svg>
                       </div>
                       <div>
-                        <h1 class="font-bold text-lg text-unancor-blue">
+                        <h1 className="font-bold text-lg text-unancor-blue">
                           Compra un Art&iacute;culo
                         </h1>
-                        <p class="text-unancor-blue text-xs">
+                        <p className="text-unancor-blue text-xs">
                           Compra un artículo para tu sitio web con un solo{" "}
                           <br />
                           click, tú escoges la tématica y nosotros hacemos el{" "}
@@ -1073,18 +1050,18 @@ function Propuestos() {
                         </p>
                       </div>
                     </div>
-                    <button class="bg-unancor-blue rounded-sm w-full py-1 text-white font-semibold">
+                    <button className="bg-unancor-blue rounded-sm w-full py-1 text-white font-semibold">
                       12.000 &euro;
                     </button>
                   </div>
-                  <div class="flex items-center justify-center p-2">
-                    <button class="bg-unancor-orange rounded-sm w-full py-1 text-white font-semibold">
+                  <div className="flex items-center justify-center p-2">
+                    <button className="bg-unancor-orange rounded-sm w-full py-1 text-white font-semibold">
                       255 &euro;
                     </button>
                   </div>
-                  <div class="flex items-center justify-center">
+                  <div className="flex items-center justify-center">
                     <svg
-                      class="mx-auto"
+                      className="mx-auto"
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
@@ -1103,10 +1080,10 @@ function Propuestos() {
               ))}
             </div>
             {/* Pagination */}
-            <div class="inline-flex w-full mt-4" style={{ height: "9%" }}>
-              <div class="w-1/3">
-                <div class="inline-flex border p-3 py-1">
-                  <span class="text-xs font-medium mr-3">
+            <div className="inline-flex w-full mt-4" style={{ height: "9%" }}>
+              <div className="w-1/3">
+                <div className="inline-flex border p-3 py-1">
+                  <span className="text-xs font-medium mr-3">
                     20 medios por p&aacute;gina
                   </span>
                   <svg
@@ -1123,8 +1100,8 @@ function Propuestos() {
                   </svg>
                 </div>
               </div>
-              <div class="w-1/3 flex">
-                <div class="mx-auto inline-flex space-x-4">
+              <div className="w-1/3 flex">
+                <div className="mx-auto inline-flex space-x-4">
                   <svg
                     width="24"
                     height="24"
@@ -1137,15 +1114,15 @@ function Propuestos() {
                       fill="#2D72C9"
                     />
                   </svg>
-                  <span class="opacity-30 font-medium">1</span>
-                  <span class="opacity-30 font-medium">2</span>
-                  <span class="text-unancor-blue font-medium">
+                  <span className="opacity-30 font-medium">1</span>
+                  <span className="opacity-30 font-medium">2</span>
+                  <span className="text-unancor-blue font-medium">
                     3
-                    <hr class="border-unancor-blue border-1" />
+                    <hr className="border-unancor-blue border-1" />
                   </span>
-                  <span class="opacity-30 font-medium">...</span>
-                  <span class="opacity-30 font-medium">7</span>
-                  <span class="opacity-30 font-medium">8</span>
+                  <span className="opacity-30 font-medium">...</span>
+                  <span className="opacity-30 font-medium">7</span>
+                  <span className="opacity-30 font-medium">8</span>
                   <svg
                     width="24"
                     height="24"
@@ -1160,8 +1137,8 @@ function Propuestos() {
                   </svg>
                 </div>
               </div>
-              <div class="w-1/3 flex justify-end">
-                <span class="text-xs font-semibold opacity-50">
+              <div className="w-1/3 flex justify-end">
+                <span className="text-xs font-semibold opacity-50">
                   10/12524 en total
                 </span>
               </div>

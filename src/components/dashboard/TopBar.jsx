@@ -2,30 +2,25 @@ import Logo from "../../assets/LOGO/image18@2x.svg";
 import PerfilImage from "../../assets/icons-dashboard-anunciante/Ellipse282.svg";
 import Circle from "../../assets/icons-dashboard-anunciante/Ellipse230.svg";
 import { Classes, Popover2 } from "@blueprintjs/popover2";
-import { Button } from "@blueprintjs/core";
-import Campana  from "../../assets/icons-dashboard-anunciante/campana.svg"
-import Cinco from "../../assets/icons-dashboard-anunciante/5.svg"
-import vector from "../../assets/icons-dashboard-anunciante/Vector.svg"
+import Campana from "../../assets/icons-dashboard-anunciante/campana.svg";
+import Cinco from "../../assets/icons-dashboard-anunciante/5.svg";
+import vector from "../../assets/icons-dashboard-anunciante/Vector.svg";
 
 function TopBar() {
   return (
     <div className="w-full h-16 bg-white absolute z-20 flex">
       <div className="inline-flex w-full">
         <div className="w-1/2 inline-flex items-center relative">
-          <img className="w-40 h-5 mt-2 ml-10 mr-5" src={Logo} alt="Logo"/>
+          <img className="w-40 h-5 mt-2 ml-10 mr-5" src={Logo} alt="Logo" />
           <Popover2
-            interactionKind="click"
+            interactionKind="hover"
             popoverClassName={Classes.POPOVER2_CONTENT_SIZING}
             placement="bottom"
             content={
               <div
                 className="
                 flex-col
-                w-56
                 space-y-4
-                bg-white
-                shadow-md
-                p-2
               "
               >
                 <button
@@ -40,7 +35,7 @@ function TopBar() {
                 >
                   Crear nuevo proyecto
                 </button>
-                <div className="inline-flex border p-2">
+                <div className="inline-flex border p-2 w-full">
                   <div className="w-1/12 mr-5">
                     <svg
                       width="24"
@@ -73,22 +68,31 @@ function TopBar() {
                 </div>
               </div>
             }
-            renderTarget={({ isOpen, ref, ...targetProps }) => (
-              <Button
-                {...targetProps}
-                elementRef={ref}
-                rightIcon="chevron-down"
-                className="font-semibold text-2xl text-unancor-orange inline-flex items-center"
-                text="miudev.com"
-              />
-            )}
-          />
+          >
+            <div className="font-semibold text-2xl text-unancor-orange inline-flex items-center cursor-pointer select-none">
+              miudev.com
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.59 8.59L12 13.17L7.41 8.59L6 10L12 16L18 10L16.59 8.59Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
+          </Popover2>
         </div>
         <div className="w-1/2 inline-flex items-center justify-end pr-6 space-x-3">
           <h1 className="font-bold text-base leading-7">
             Billetera: 35.021 &euro;
           </h1>
-          <h1 className="font-bold text-base leading-7">Cr&eacute;dito: 3.502</h1>
+          <h1 className="font-bold text-base leading-7">
+            Cr&eacute;dito: 3.502
+          </h1>
           <div className="relative h-10 w-10">
             <img
               alt="Circle"
@@ -106,16 +110,8 @@ function TopBar() {
               src={Cinco}
             />
           </div>
-          <img
-            alt="Campana"
-            className="h-5 w-5"
-            src={Campana}
-          />
-          <img
-            alt="PerfilIMage"
-            className="h-10 w-10"
-            src={PerfilImage}
-          />
+          <img alt="Campana" className="h-5 w-5" src={Campana} />
+          <img alt="PerfilIMage" className="h-10 w-10" src={PerfilImage} />
         </div>
       </div>
     </div>

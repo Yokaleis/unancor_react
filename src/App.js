@@ -17,13 +17,14 @@ import {
   Felicidades,
   HomeAnunciante,
   AnalisisEspera,
-  CrearAnalisis,
-  HomeSerps,
   PopUpAnalisis,
   PopUpAnalisisFull,
   ResultadoAnalisis,
   Competencias,
   Propuestos,
+  CompraArticulo,
+  CrearAnalisisPasoDos,
+  CrearAnalisisPasoUno,
 } from "./pages/index";
 
 import Topbar from "./components/dashboard/TopBar";
@@ -104,10 +105,10 @@ function App() {
           </Route>
           <Route path="/HomeSerps">
             <Switch>
-              <Route exact path="/HomeSerps">
+              <Route path="/HomeSerps/CrearAnalisisPasoUno">
                 <Topbar />
                 <Sidebar />
-                <HomeSerps />
+                <CrearAnalisisPasoUno />
               </Route>
               <Route exact path="/HomeSerps/AnalisisEspera">
                 <Topbar />
@@ -129,10 +130,10 @@ function App() {
                 <Sidebar />
                 <PopUpAnalisisFull />
               </Route>
-              <Route path="/HomeSerps/CrearAnalisis">
+              <Route path="/HomeSerps/CrearAnalisisPasoDos">
                 <Topbar />
                 <Sidebar />
-                <CrearAnalisis />
+                <CrearAnalisisPasoDos />
               </Route>
               <Route path="/HomeSerps/Competencias">
                 <Topbar />
@@ -145,6 +146,11 @@ function App() {
                 <Propuestos />
               </Route>
             </Switch>
+          </Route>
+          <Route path="/CompraArticulo">
+            <Topbar />
+            <Sidebar />
+            <CompraArticulo/>
           </Route>
           <Redirect to="/Inicio" />
         </Switch>
