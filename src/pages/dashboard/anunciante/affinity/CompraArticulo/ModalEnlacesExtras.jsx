@@ -15,7 +15,6 @@ function ModalEnlacesExtras() {
   });
 
   const handleClose = () => setDialogState({ ...dialogState, isOpen: false });
-
   const handleOpen = () => setDialogState({ ...dialogState, isOpen: true });
 
   return (
@@ -47,7 +46,7 @@ function ModalEnlacesExtras() {
             </div>
           </label>
           <div className="flex justify-end mt-5">
-            <button className="bg-unancor-orange px-4 text-white py-2 rounded">
+            <button className="bg-unancor-orange px-4 text-white py-2 rounded" onClick={handleClose}>
               Añadir
             </button>
           </div>

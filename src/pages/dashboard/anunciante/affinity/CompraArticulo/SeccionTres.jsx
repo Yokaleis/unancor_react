@@ -57,7 +57,7 @@ function SeccionTres() {
   };
 
   return (
-    <div className="px-5 flex flex-col">
+    <div className="px-5 flex flex-col space-y-2">
       {checkboxs.map(({ label, checked }, index) => (
         <label className="space-x-2" key={index}>
           <input

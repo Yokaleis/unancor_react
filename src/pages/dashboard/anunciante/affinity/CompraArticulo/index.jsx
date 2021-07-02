@@ -1,11 +1,14 @@
 import ModalSugerencias from "./ModalSugerencias";
 import SugerenciasEnlacesPrincipal from "./SugerenciasEnlacesPrincipal";
 import CustomSelect from "./CustomSelect";
-import ModalEnlacesExtras from "./ModalEnlacesExtras";
 import ContextoEnlace from "./ContextoEnlace";
 import ModalIdeasArticulo from "./ModalIdeasArticulo";
 import ModelOpcionesAvanzadas from "./ModelOpcionesAvanzadas";
-import SeccionTres from './SeccionTres'
+import SeccionTres from "./SeccionTres";
+import SeccionEnlacesExtras from "./SeccionEnlacesExtras";
+import ResumenEnlacesExtras from "./ResumenEnlacesExtras";
+import ResumenTotalCompra from "./ResumenTotalCompra"
+import ModalDatosPago from './ModalDatosPago'
 
 function TituloSeccion({ number, existHr, titulo, subtitulo }) {
   return (
@@ -35,6 +38,36 @@ function CustomCheckBox({ title, subtitle }) {
     </label>
   );
 }
+
+const enlacesExtras = [
+  {
+    title: "https://www.unoenlaces.com",
+    contexto:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in eleifend enim, eget tempus libero. Quisque consequat tincidunt erat lacinia suscipit. In egestas, orci elementum venenatis aliquet, enim sapien luctus ex, consequat tincidunt magna leo eu tortor. Cras in posuere erat, a aliquam urna. ",
+    keywords:
+      "cronicas economicas, potencias economicas, principales actividades economicas en",
+    clicks: 1020,
+    precio: "102 €",
+  },
+  {
+    title: "https://www.dosenlaces.com",
+    contexto:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in eleifend enim, eget tempus libero. Quisque consequat tincidunt erat lacinia suscipit. In egestas, orci elementum venenatis aliquet, enim sapien luctus ex, consequat tincidunt magna leo eu tortor. Cras in posuere erat, a aliquam urna. ",
+    keywords:
+      "cronicas economicas, potencias economicas, principales actividades economicas en",
+    clicks: 1020,
+    precio: "102 €",
+  },
+  {
+    title: "https://www.tresenlaces.com",
+    contexto:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in eleifend enim, eget tempus libero. Quisque consequat tincidunt erat lacinia suscipit. In egestas, orci elementum venenatis aliquet, enim sapien luctus ex, consequat tincidunt magna leo eu tortor. Cras in posuere erat, a aliquam urna. ",
+    keywords:
+      "cronicas economicas, potencias economicas, principales actividades economicas en",
+    clicks: 1020,
+    precio: "102 €",
+  },
+];
 
 function CompraArticulo() {
   return (
@@ -67,7 +100,6 @@ function CompraArticulo() {
                     placeholder="Seleccione una opcion"
                   />
                   <ContextoEnlace />
-                  <ModalEnlacesExtras />
                 </div>
                 <div>
                   <SugerenciasEnlacesPrincipal id="principal" />
@@ -84,6 +116,7 @@ function CompraArticulo() {
                   </label>
                 </div>
               </div>
+              <SeccionEnlacesExtras enlacesExtras={enlacesExtras} />
             </div>
             <TituloSeccion
               number="2"
@@ -173,13 +206,7 @@ function CompraArticulo() {
                 />
               </div>
               <div className="col-span-1 grid grid-cols-2">
-                <div className="flex flex-col justify-end">
-                  <div className="space-y-5">
-                    <h1 className="text-lg">URL del sitio</h1>
-                    <p className="text-sm opacity-30">Aún no tines enlace</p>
-                  </div>
-                </div>
-                <div className="flex flex-col space-y-4">
+                <div className="flex flex-col space-y-4 col-span-1 col-start-2">
                   <CustomSelect
                     label="Presupuesto"
                     options={["10&euro;", "10&euro;", "10&euro;", "10&euro;"]}
@@ -195,46 +222,16 @@ function CompraArticulo() {
                     options={["10&euro;", "10&euro;", "10&euro;", "10&euro;"]}
                     placeholder="10&euro;"
                   />
-                  <div className="grid grid-cols-2 gap-5">
-                    <div className="flex flex-col text-center">
-                      <span>Clicks</span>
-                      <input
-                        type="text"
-                        placeholder="10"
-                        className="border p-2 bg-gray-50 border-gray-200 m-"
-                      />
-                    </div>
-                    <div className="flex flex-col text-center">
-                      <span>Precio</span>
-                      <input
-                        type="text"
-                        placeholder="10&euro;"
-                        className="border p-2 bg-gray-50 border-gray-200"
-                      />
-                    </div>
-                  </div>
                 </div>
+              </div>
+              <div className="grid grid-cols-2 col-span-1 col-start-3 mt-4">
+                <ResumenEnlacesExtras enlacesExtras={enlacesExtras} />
               </div>
             </div>
             <hr className="my-5" />
             <div className="grid grid-cols-3">
               <div className="flex flex-col col-span-1 col-start-3 px-5">
-                <div className="grid grid-cols-2">
-                  <div>
-                    <p className="text-lg font-bold">Resumen de tu compra</p>
-                    <p className="text-lg">Artículo en Cronista</p>
-                  </div>
-                  <div className="flex justify-end items-end">
-                    <p className="text-lg">240 €</p>
-                  </div>
-                </div>
-                <hr className="my-5 mx-5" />
-                <div className="grid grid-cols-2 mb-4">
-                  <p className="text-5xl font-bold">Total</p>
-                  <div className="flex justify-end items-end">
-                    <p className="text-5xl font-bold">240€</p>
-                  </div>
-                </div>
+                <ResumenTotalCompra/>
                 <label className="space-y-2">
                   <span className="text-lg px-5">
                     Agrega un cupón de descuento
@@ -249,9 +246,7 @@ function CompraArticulo() {
                   <button className="border border-unancor-blue text-unancor-blue p-2">
                     Añadir al carrito
                   </button>
-                  <button className="bg-unancor-blue text-white p-2">
-                    Comprar artículo
-                  </button>
+                  <ModalDatosPago/>
                 </div>
               </div>
             </div>

@@ -4,7 +4,7 @@ import { useState } from "react"
 
 function CustomSelect({ options, placeholder, label }) {
   const [selectedItem, setSelectItem] = useState(undefined)
-  const renderTag = (item, { handleClick, ...rest }, tres) => {
+  const renderTag = (item, { handleClick }) => {
     return (
       <p
         className="text-lg font-semibold hover:bg-gray-100 hover:text-unancor-blue cursor-pointer p-1 px-5"
