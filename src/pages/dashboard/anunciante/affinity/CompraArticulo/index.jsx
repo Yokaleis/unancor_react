@@ -1,10 +1,11 @@
 import ModalSugerencias from "./ModalSugerencias";
 import SugerenciasEnlacesPrincipal from "./SugerenciasEnlacesPrincipal";
-import CustomSelect from "./CustomSelect"
-import ModalEnlacesExtras from './ModalEnlacesExtras' 
-import ContextoEnlace from './ContextoEnlace' 
-import ModalIdeasArticulo from "./ModalIdeasArticulo"
-import ModelOpcionesAvanzadas from "./ModelOpcionesAvanzadas"
+import CustomSelect from "./CustomSelect";
+import ModalEnlacesExtras from "./ModalEnlacesExtras";
+import ContextoEnlace from "./ContextoEnlace";
+import ModalIdeasArticulo from "./ModalIdeasArticulo";
+import ModelOpcionesAvanzadas from "./ModelOpcionesAvanzadas";
+import SeccionTres from './SeccionTres'
 
 function TituloSeccion({ number, existHr, titulo, subtitulo }) {
   return (
@@ -62,19 +63,14 @@ function CompraArticulo() {
                 <div>
                   <CustomSelect
                     label="Opciones de enlaces"
-                    options={[
-                      "DoFollow",
-                      "NoFollow",
-                      "Sponsores",
-                      "Mención",
-                    ]}
+                    options={["DoFollow", "NoFollow", "Sponsores", "Mención"]}
                     placeholder="Seleccione una opcion"
                   />
-                  <ContextoEnlace/>
-                  <ModalEnlacesExtras/>
+                  <ContextoEnlace />
+                  <ModalEnlacesExtras />
                 </div>
                 <div>
-                  <SugerenciasEnlacesPrincipal id="principal"/>
+                  <SugerenciasEnlacesPrincipal id="principal" />
                   <label className="flex flex-col">
                     <span className="text-lg mt-3">Anchor o palabra clave</span>
                     <div className="inline-flex space-x-5">
@@ -96,7 +92,10 @@ function CompraArticulo() {
               existHr={true}
             />
             <div className="flex flex-col px-5">
-              <div className="inline-flex"  style={{ justifyContent: "space-between"}}>
+              <div
+                className="inline-flex"
+                style={{ justifyContent: "space-between" }}
+              >
                 <div className="w-96">
                   <CustomSelect
                     label="Tematica"
@@ -132,14 +131,14 @@ function CompraArticulo() {
                       fill="#FF6139"
                     />
                   </svg>
-                  <ModalIdeasArticulo/>
+                  <ModalIdeasArticulo />
                 </div>
               </div>
               <textarea
                 placeholder="Explicanos de que quieres que hable hable el artículo"
                 className="border p-2 bg-gray-50 border-gray-200 w-full mt-3"
               ></textarea>
-              <ModelOpcionesAvanzadas/>
+              <ModelOpcionesAvanzadas />
             </div>
             <TituloSeccion
               number="3"
@@ -147,20 +146,7 @@ function CompraArticulo() {
               subtitulo="opciones complementarias a considerar"
               existHr={true}
             />
-            <div className="px-5 flex flex-col">
-              <label className="space-x-2">
-                <input type="checkbox" />
-                <span className="text-lg opacity-30">
-                  Quiero revisar el artículo antes de enviárselo al medio
-                </span>
-              </label>
-              <label className="space-x-2">
-                <input type="checkbox" />
-                <span className="text-lg opacity-30">
-                  Programar la publicidad del artículo
-                </span>
-              </label>
-            </div>
+            <SeccionTres />
             <TituloSeccion
               number="4"
               titulo="Link Booster"
