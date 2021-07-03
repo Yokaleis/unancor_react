@@ -14,7 +14,7 @@ function TituloSeccion({ number, existHr, titulo, subtitulo }) {
   return (
     <>
       {existHr && <hr className="my-5" />}
-      <div className="inline-flex space-x-2 mb-2">
+      <div className="inline-flex space-x-2 ml-4 mb-8">
         <div className="px-3 py-1 bg-unancor-blue text-white rounded font-bold text-lg">
           {number}
         </div>
@@ -85,7 +85,7 @@ function CompraArticulo() {
             </ul>
           </div>
           <hr className="my-5" />
-          <div className="flex flex-col overflow-auto">
+          <div className="flex flex-col overflow-auto m-auto w-11/12">
             <TituloSeccion
               number="1"
               titulo="Enlaces y menciones"

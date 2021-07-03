@@ -17,6 +17,7 @@ import ResultadoAnalisis from "./dashboard/anunciante/affinity/SERPS/ResultadoAn
 import Competencias from "./dashboard/anunciante/affinity/competencias"
 import Propuestos from "./dashboard/anunciante/affinity/propuestos"
 import CompraArticulo from "./dashboard/anunciante/affinity/CompraArticulo/index"
+import MarketplacePage from "./dashboard/anunciante/marketplace/marketplace"
 
 export { 
     Inicio,
@@ -38,4 +39,5 @@ export {
     Competencias,
     Propuestos,
     CompraArticulo,
+    MarketplacePage,
 }

@@ -111,12 +111,12 @@ function Inicio() {
               </p>
             </label>
             <Link
-              className="bg-unancor-blue text-white text-center font-bold py-3 px-4 rounded text-sm"
+              className="bg-unancor-blue text-white text-center font-bold py-3 px-4 rounded text-sm hover:no-underline hover:text-white"
               to="/VerificaTuCuenta"
             >
               Registrar mi negocio
             </Link>
-            <Link className="py-3 font-medium text-center text-sm hover:bg-gray hover:text-unancor-orange cursor-pointer">
+            <Link className="py-3 font-medium text-center text-sm hover:bg-gray hover:text-unancor-orange  cursor-pointer">
               Tengo una cuenta
             </Link>
           </form>

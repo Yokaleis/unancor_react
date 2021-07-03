@@ -22,7 +22,7 @@ function SeleccionarKeywords() {
           class="appearance-none border bg-unancor-bginput rounded w-full py-2 px-3 text-gray-700 leading-tight mt-3 focus:outline-none focus:ring-2 focus:ring-unancor-blue focus:border-transparent"
         ></textarea>
         <button class="text-sm bg-unancor-blue hover:bg-white hover:text-unancor-blue text-white font-bold py-3 px-4 mt-10 border-2 border-unancor-blue rounded w-full focus:outline-none focus:ring-2 focus:ring-unancor-blue focus:border-transparent">
-          <Link to="/Felicidades">Finalizar registro</Link>
+          <Link className="hover:no-underline" to="/Felicidades">Finalizar registro</Link>
         </button>
       </div>
     </div>

@@ -243,7 +243,7 @@ function RegistroProyecto() {
         </form>
         <div class="mt-10">
           <button class="text-sm bg-unancor-blue hover:bg-white hover:text-unancor-blue text-white font-bold py-3 px-4 border-2 border-unancor-blue rounded w-full focus:outline-none focus:ring-2 focus:ring-unancor-blue focus:border-transparent">
-            <Link to="/SeleccionarKeywords"> Continuar</Link>
+            <Link className="hover:no-underline" to="/SeleccionarKeywords"> Continuar</Link>
           </button>
         </div>
       </div>

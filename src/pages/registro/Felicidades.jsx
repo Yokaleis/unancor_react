@@ -11,7 +11,7 @@ function Felicidades({ clientType }) {
           class="text-sm bg-unancor-blue hover:bg-white hover:text-unancor-blue text-white font-bold py-3 px-4 border-2 border-unancor-blue rounded w-full mt-10 
             focus:outline-none focus:ring-2 focus:ring-unancor-blue focus:border-transparent"
         >
-          <Link
+          <Link className="hover:no-underline"
             to={clientType === "anunciante" ? "/HomeAnunciante" : "/HomeEditor"}
           >
             Ir al Dashboard
