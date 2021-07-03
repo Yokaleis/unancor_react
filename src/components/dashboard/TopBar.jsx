@@ -87,10 +87,10 @@ function TopBar() {
           </Popover2>
         </div>
         <div className="w-1/2 inline-flex items-center justify-end pr-6 space-x-3">
-          <h1 className="font-bold text-base leading-7">
+          <h1 className="font-bold text-sm leading-7">
             Billetera: 35.021 &euro;
           </h1>
-          <h1 className="font-bold text-base leading-7">
+          <h1 className="font-bold text-sm leading-7">
             Cr&eacute;dito: 3.502
           </h1>
           <div className="relative h-10 w-10">

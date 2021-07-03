@@ -13,7 +13,7 @@ function Propuestos() {
           >
             <h1 className="text-sm font-medium cursor-pointer">
               Propuestos
-              <hr className="border-unancor-blue border-4 rounded-xl mt-2" />
+              <div class="bg-unancor-blue h-1 rounded-xl mt-1"></div>
             </h1>
             <h1 className="text-sm font-medium opacity-30 cursor-pointer">
               Analizados
@@ -46,41 +46,19 @@ function Propuestos() {
               </div>
             </div>
             <div className="inline-flex w-1/2 justify-end space-x-4">
-              <div className="border inline-flex px-4 py-2">
-                <span className="text-xs mr-5 my-auto">Todos</span>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.41 8.58984L12 13.1698L16.59 8.58984L18 9.99984L12 15.9998L6 9.99984L7.41 8.58984Z"
-                    fill="black"
-                  />
-                </svg>
+              <div className="flex inline-flex border px-4 py-2 cursor-pointer">
+                <span className="text-sm">Todos</span>
+                <span class="material-icons-outlined">expand_more</span>
               </div>
-              <div className="inline-flex border px-4 py-2">
-                <span className="text-xs">Nofollow</span>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.41 8.58984L12 13.1698L16.59 8.58984L18 9.99984L12 15.9998L6 9.99984L7.41 8.58984Z"
-                    fill="black"
-                  />
-                </svg>
+              <div className="flex inline-flex border px-4 py-2">
+                <span className="text-sm">Nofollow</span>
+                <span class="material-icons-outlined">expand_more</span>
               </div>
               <div
                 className="inline-flex border px-4 py-2 space-x-2 relative cursor-pointer"
                 id="buttonAffinity"
               >
-                <span className="text-xs">Afinidad:</span>
+                <span className="text-sm">Afinidad</span>
                 <svg
                   className="my-auto"
                   width="28"
@@ -93,18 +71,7 @@ function Propuestos() {
                   <rect x="10" width="8" height="8" rx="1" fill="#66BB6A" />
                   <rect x="20" width="8" height="8" rx="1" fill="#4CAF50" />
                 </svg>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M16.59 15.4102L12 10.8302L7.41 15.4102L6 14.0002L12 8.00016L18 14.0002L16.59 15.4102Z"
-                    fill="black"
-                  />
-                </svg>
+                <span class="material-icons-outlined">expand_more</span>
 
                 <div
                   className="bg-white p-3 shadow-md absolute flex-col w-36 z-10 top-11 right-0 hidden"
@@ -152,8 +119,8 @@ function Propuestos() {
                 </div>
                 {/* Menu Affinity */}
               </div>
-              <div className="inline-flex border px-4 py-2 space-x-2">
-                <span className="text-xs">Spam</span>
+              <div className="flex flex-row border px-4 py-2 space-x-2 relative cursor-pointer">
+                <span className="text-sm">Spam</span>
                 <svg
                   className="my-auto"
                   width="28"
@@ -166,43 +133,18 @@ function Propuestos() {
                   <rect x="10" width="8" height="8" rx="1" fill="#E7E7E7" />
                   <rect x="20" width="8" height="8" rx="1" fill="#E7E7E7" />
                 </svg>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.41 8.58984L12 13.1698L16.59 8.58984L18 9.99984L12 15.9998L6 9.99984L7.41 8.58984Z"
-                    fill="black"
-                  />
-                </svg>
+                <span class="material-icons-outlined">expand_more</span>
               </div>
               <div
-                className="inline-flex border px-2 py-2 relative"
-                id="buttonFilter"
-              >
+                className="inline-flex border px-2 py-2 relative cursor-pinter" id="buttonFilter">
                 {/* Boton de filtros */}
                 <input
-                  className="placeholder-black opacity-50 text-xs w-20"
+                  className="placeholder-black opacity-50 text-sm w-20"
                   type="text"
                   placeholder="Filtros"
                 />
                 <div>
-                  <svg
-                    className="ml-2"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M7.00067 6H17.0007L11.9907 12.3L7.00067 6ZM4.25067 5.61C6.27067 8.2 10.0007 13 10.0007 13V19C10.0007 19.55 10.4507 20 11.0007 20H13.0007C13.5507 20 14.0007 19.55 14.0007 19V13C14.0007 13 17.7207 8.2 19.7407 5.61C20.2507 4.95 19.7807 4 18.9507 4H5.04067C4.21067 4 3.74067 4.95 4.25067 5.61Z"
-                      fill="black"
-                    />
-                  </svg>
+                <span class="material-icons-outlined">filter_alt</span>
                 </div>
                 <div
                   className="p-3 bg-white z-10 hidden text-xs w-52 shadow-md top-10 right-0"

@@ -47,6 +47,7 @@ const ItemsSidebar = [
     ),
   },
   {
+    
     title: "Affinity",
     link: "/HomeSerps/Propuestos",
     Icon: ({ selectedMenu }) => (
@@ -609,15 +610,15 @@ function Sidebar() {
 
   return (
     <div className="bg-unancor-blue w-20 flex flex-col h-full absolute z-10">
-      <div className="mt-20 w-full space-y-2">
+      <div className="mt-32 w-full space-y-6">
         {ItemsSidebar.map(({ title, Icon, link }, index) => {
           let linkBasePath = link ? "/" + link.split("/")[1] : ""
           return (
             <Link
             className={
               basePath === linkBasePath
-                ? "cursor-pointer text-center block bg-gray-200"
-                : "cursor-pointer text-center block"
+                ? "cursor-pointer text-center hover:no-underline block bg-gray-200 py-2"
+                : "cursor-pointer text-center  block"
             }
             key={index}
             to={link || ""}

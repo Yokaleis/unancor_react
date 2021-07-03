@@ -73,7 +73,7 @@ function Home() {
               <div className="font-bold text-5xl text-white">Linkbooster</div>
               <div className="flex flex-col items-end">
                 <div className="text-5xl text-white font-bold">-50%</div>
-                <div className="text-xl text-white">
+                <div className="text-sm text-white">
                   Promoci&oacute;n valida hasta 01/05/2021
                 </div>
               </div>
